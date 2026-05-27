@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.jdt.ls.java.home": "C:/sk-java/sdk/jdk-21.0.7",
+		"java.import.gradle.java.home": "C:/sk-java/sdk/jdk-21.0.7",
+		"java.configuration.runtimes": [
+			{
+				"name": "JavaSE-21",
+				"path": "C:/sk-java/sdk/jdk-21.0.7",
+				"default": true
+			}
+		],
+		"java.import.gradle.wrapper.enabled": true,
+		"java.dependency.packagePresentation": "flat",
+		// "[java]": {
+		// 	"files.encoding": "iso88591"
+		// },
+		"files.trimFinalNewlines": true,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"java.compile.nullAnalysis.mode": "automatic",
+		"java.project.explorer.showNonJavaResources": false
+	}
+}
