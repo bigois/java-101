@@ -7,16 +7,16 @@ public class ClassicInterfaceApp {
         BankAccount account1 = new BankAccount(1L);
         BankAccount account2 = new BankAccount(2L);
 
-        account1.deposit(BigDecimal.valueOf(100));
-        account2.deposit(BigDecimal.valueOf(200));
+        account1.deposit(new BigDecimal("100"));
+        account2.deposit(new BigDecimal("200"));
 
         System.out.println("Account 1 balance: " + account1.getBalance());
         System.out.println("Account 2 balance: " + account2.getBalance());
 
-        account1.withdraw(BigDecimal.valueOf(10));
-        account2.withdraw(BigDecimal.valueOf(90));
+        account1.withdraw(new BigDecimal("10"));
+        account2.withdraw(new BigDecimal("90"));
 
-        System.out.println("Account 1 balance after witdraw: " + account1.getBalance());
-        System.out.println("Account 2 balance after witdraw: " + account2.getBalance());
+        System.out.println("Account 1 balance after withdraw: " + account1.getBalance());
+        System.out.println("Account 2 balance after withdraw: " + account2.getBalance());
     }
 }
