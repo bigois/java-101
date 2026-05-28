@@ -3,3 +3,9 @@
 
 # Ignore Gradle build output directory
 build
+
+# Ignore Claude cache directory
+.claude/*
+
+# Ignore VS Code workspace settings
+.vscode/*
