@@ -2,11 +2,12 @@ package interfaces.defaultmethod;
 
 import java.math.BigDecimal;
 
+import interfaces.classicinterface.AccountType;
 import interfaces.classicinterface.BankAccount;
 
 public class BusinessAccount extends BankAccount implements BrokerAccount {
     public BusinessAccount(Long id) {
-        super(id);
+        super(id, AccountType.BUSINESS);
     }
 
     @Override

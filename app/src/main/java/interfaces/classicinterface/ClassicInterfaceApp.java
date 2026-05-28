@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 public class ClassicInterfaceApp {
     public static void main(String[] args) {
-        BankAccount account1 = new BankAccount(1L);
-        BankAccount account2 = new BankAccount(2L);
+        BankAccount account1 = new BankAccount(1L, AccountType.PERSONAL);
+        BankAccount account2 = new BankAccount(2L, AccountType.PERSONAL);
 
         account1.deposit(new BigDecimal("100"));
         account2.deposit(new BigDecimal("200"));

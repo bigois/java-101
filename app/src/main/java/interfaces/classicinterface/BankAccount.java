@@ -4,10 +4,12 @@ import java.math.BigDecimal;
 
 public class BankAccount implements AccountOperation {
     private final Long id;
+    private final AccountType accountType;
     private BigDecimal balance;
 
-    public BankAccount(Long id) {
+    public BankAccount(Long id, AccountType accountType) {
         this.id = id;
+        this.accountType = accountType;
         this.balance = BigDecimal.ZERO;
     }
 
@@ -40,5 +42,9 @@ public class BankAccount implements AccountOperation {
 
     public Long getId() {
         return this.id;
+    }
+
+    public AccountType getAccountType() {
+        return this.accountType;
     }
 }
