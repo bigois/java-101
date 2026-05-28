@@ -2,7 +2,7 @@ package interfaces.defaultmethod;
 
 import java.math.BigDecimal;
 
-public class DefaultMethod {
+public class DefaultMethodApp {
     public static void main(String[] args) {
         PersonalAccount personalAccount = new PersonalAccount(1L);
         BusinessAccount businessAccount = new BusinessAccount(2L);
