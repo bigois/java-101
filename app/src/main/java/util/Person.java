@@ -1,4 +1,4 @@
-package br.com.bigois.optional;
+package util;
 
 import java.util.Optional;
 

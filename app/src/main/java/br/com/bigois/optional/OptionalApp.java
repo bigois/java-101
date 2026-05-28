@@ -1,6 +1,8 @@
 package br.com.bigois.optional;
 
-public class App {
+import util.Person;
+
+public class OptionalApp {
     public static void main(String[] args) {
         Person person = new Person("Guilherme", "Bigois");
         System.out.println("First name: " + person.getFirstName());
