@@ -16,13 +16,14 @@
 		],
 		"java.import.gradle.wrapper.enabled": true,
 		"java.dependency.packagePresentation": "flat",
-		// "[java]": {
-		// 	"files.encoding": "iso88591"
-		// },
+		"[java]": {
+			"files.encoding": "utf8",
+		},
 		"files.trimFinalNewlines": true,
 		"files.trimTrailingWhitespace": true,
 		"files.insertFinalNewline": true,
 		"java.compile.nullAnalysis.mode": "automatic",
-		"java.project.explorer.showNonJavaResources": false
+		"java.project.explorer.showNonJavaResources": false,
+		"files.eol": "\r\n"
 	}
 }
