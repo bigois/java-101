@@ -24,6 +24,7 @@
 		"files.insertFinalNewline": true,
 		"java.compile.nullAnalysis.mode": "automatic",
 		"java.project.explorer.showNonJavaResources": false,
-		"files.eol": "\r\n"
+		"files.eol": "\r\n",
+		"java.configuration.updateBuildConfiguration": "interactive"
 	}
 }
