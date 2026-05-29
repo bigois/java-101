@@ -1,9 +1,9 @@
-package interfaces.defaultmethod;
+package br.com.bigois.interfaces.defaultmethod;
 
 import java.math.BigDecimal;
 
-import interfaces.classicinterface.AccountType;
-import interfaces.classicinterface.BankAccount;
+import br.com.bigois.interfaces.classicinterface.AccountType;
+import br.com.bigois.interfaces.classicinterface.BankAccount;
 
 public class BusinessAccount extends BankAccount implements BrokerAccount {
     public BusinessAccount(Long id) {

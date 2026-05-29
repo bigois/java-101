@@ -1,4 +1,4 @@
-package interfaces.classicinterface;
+package br.com.bigois.interfaces.classicinterface;
 
 import java.math.BigDecimal;
 

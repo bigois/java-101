@@ -1,4 +1,4 @@
-package interfaces.staticmethod;
+package br.com.bigois.interfaces.staticmethod;
 
 public class AmericanPerson implements Greeting {
     @Override

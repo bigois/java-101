@@ -1,4 +1,4 @@
-package interfaces.defaultmethod;
+package br.com.bigois.interfaces.defaultmethod;
 
 import java.math.BigDecimal;
 
