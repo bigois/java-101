@@ -1,7 +1,5 @@
 package br.com.bigois.optional;
 
-import util.Person;
-
 public class OptionalApp {
     public static void main(String[] args) {
         Person person = new Person("Guilherme", "Bigois");
