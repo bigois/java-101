@@ -9,3 +9,6 @@ build
 
 # Ignore VS Code workspace settings
 .vscode/*
+
+# Ignore docs folder
+docs/*
