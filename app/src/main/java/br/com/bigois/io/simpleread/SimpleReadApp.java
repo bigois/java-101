@@ -3,12 +3,13 @@ package br.com.bigois.io.simpleread;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.json.JSONObject;
 
 public class SimpleReadApp {
     public static void main(String[] args) {
-        Path filePath = Path.of("app\\src\\test\\resources\\sample.json");
+        Path filePath = Paths.get("app", "src", "test", "resources", "sample.json");
 
         try {
             byte[] bytes = Files.readAllBytes(filePath);
