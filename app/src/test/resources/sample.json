@@ -1,0 +1,30 @@
+{
+    "family": {
+        "lastName": "Bigois",
+        "responsiblePerson": {
+            "name": "Guilherme",
+            "profession": "Software Developer",
+            "birthDate": "1996-02-04"
+        },
+        "dependents": [
+            {
+                "name": "Danna",
+                "profession": "Data Analyst",
+                "relationship": "spouse"
+            },
+            {
+                "name": "Bernardo",
+                "profession": "Student",
+                "relationship": "son"
+            },
+            {
+                "name": "Henrique",
+                "profession": "Student",
+                "relationship": "son"
+            }
+        ],
+        "settings": {
+            "note": "Sample JSON for Java studies"
+        }
+    }
+}
