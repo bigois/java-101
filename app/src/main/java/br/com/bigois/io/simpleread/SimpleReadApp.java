@@ -1,6 +1,7 @@
 package br.com.bigois.io.simpleread;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,7 +14,7 @@ public class SimpleReadApp {
 
         try {
             byte[] bytes = Files.readAllBytes(filePath);
-            String string = new String(bytes);
+            String string = new String(bytes, StandardCharsets.UTF_8);
             JSONObject json = new JSONObject(string);
 
             System.out.println(json);
