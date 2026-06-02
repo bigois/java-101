@@ -16,7 +16,7 @@
 			}
 		],
 		"java.import.gradle.wrapper.enabled": true,
-		"java.dependency.packagePresentation": "flat",
+		"java.dependency.packagePresentation": "hierarchical",
 		"[java]": {
 			"files.encoding": "utf8",
 		},
@@ -24,8 +24,9 @@
 		"files.trimTrailingWhitespace": true,
 		"files.insertFinalNewline": true,
 		"java.compile.nullAnalysis.mode": "automatic",
-		"java.project.explorer.showNonJavaResources": false,
+		"java.project.explorer.showNonJavaResources": true,
 		"files.eol": "\r\n",
-		"java.configuration.updateBuildConfiguration": "interactive"
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.dependency.syncWithFolderExplorer": true
 	}
 }
