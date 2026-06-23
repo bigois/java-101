@@ -54,7 +54,7 @@ public class ReportData {
     }
 
     private Path initiateReportPath() {
-        Path folder = Paths.get("C:\\sk-java\\git\\java-101\\docs");
+        Path folder = Paths.get("docs");
         Path report = folder.resolve("people-report.xlsx");
 
         return report;
