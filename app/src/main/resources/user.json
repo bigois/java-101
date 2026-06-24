@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "name": "Guilherme",
+    "birthDate": "1996-02-04",
+    "isActive": true,
+    "role": "Developer",
+    "lastPurchase": 100.50
+}

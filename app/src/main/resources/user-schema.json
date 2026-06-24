@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Simple JSON schema for user data validation",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "type": "integer",
+            "minimum": 1,
+            "$comment": "Unique identifier for the user"
+        },
+        "name": {
+            "type": "string",
+            "minLength": 2,
+            "$comment": "User's full name"
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "M",
+                "F"
+            ],
+            "$comment": "User's gender"
+        },
+        "birthDate": {
+            "type": "string",
+            "minLength": 10,
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+            "$comment": "User's birth date in YYYY-MM-DD format"
+        },
+        "isActive": {
+            "type": "boolean",
+            "$comment": "Indicates if the user is active"
+        },
+        "role": {
+            "const": "Developer",
+            "$comment": "User's role, must be 'Developer'"
+        },
+        "lastPurchase": {
+            "type": "number",
+            "minimum": 0.01,
+            "$comment": "The amount of the user's last purchase, must be at least 0.01"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "birthDate",
+        "isActive"
+    ]
+}
