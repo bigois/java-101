@@ -2,7 +2,7 @@ package br.com.bigois.interfaces.classicinterface;
 
 import java.math.BigDecimal;
 
-public class BankAccount implements AccountOperation {
+public class BankAccount implements AccountOperation, Comparable<BankAccount> {
     private final Long id;
     private final AccountType accountType;
     private BigDecimal balance;
@@ -58,5 +58,10 @@ public class BankAccount implements AccountOperation {
     public String toString() {
         return "{id=" + getId() + ", accountType="
                 + getAccountType() + ", balance=" + getBalance() + "}";
+    }
+
+    @Override
+    public int compareTo(BankAccount account) {
+        return getId().compareTo(account.getId());
     }
 }
