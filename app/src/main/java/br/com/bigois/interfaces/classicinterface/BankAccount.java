@@ -10,7 +10,7 @@ public class BankAccount implements AccountOperation {
     public BankAccount(Long id, AccountType accountType) {
         this.id = id;
         this.accountType = accountType;
-        this.balance = BigDecimal.ZERO;
+        balance = BigDecimal.ZERO; // There is no ambiguity, so [this.] IS NOT required here
     }
 
     @Override
@@ -19,7 +19,7 @@ public class BankAccount implements AccountOperation {
             throw new IllegalArgumentException("Deposit amount must be positive");
         }
 
-        this.balance = this.balance.add(amount);
+        balance = balance.add(amount);
     }
 
     @Override
@@ -28,23 +28,23 @@ public class BankAccount implements AccountOperation {
             throw new IllegalArgumentException("Withdrawal amount must be positive");
         }
 
-        if (this.balance.compareTo(amount) < 0) {
+        if (balance.compareTo(amount) < 0) {
             throw new IllegalArgumentException("Insufficient funds");
         }
 
-        this.balance = this.balance.subtract(amount);
+        balance = balance.subtract(amount);
     }
 
     @Override
     public BigDecimal getBalance() {
-        return this.balance;
+        return balance;
     }
 
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public AccountType getAccountType() {
-        return this.accountType;
+        return accountType;
     }
 }
