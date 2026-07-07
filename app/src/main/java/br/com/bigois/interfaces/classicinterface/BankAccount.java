@@ -13,6 +13,12 @@ public class BankAccount implements AccountOperation {
         balance = BigDecimal.ZERO; // There is no ambiguity, so [this.] IS NOT required here
     }
 
+    public BankAccount(Long id, AccountType accountType, BigDecimal balance) {
+        this.id = id;
+        this.accountType = accountType;
+        this.balance = balance; // There is ambiguity here, so [this.] IS required here
+    }
+
     @Override
     public void deposit(BigDecimal amount) throws IllegalArgumentException {
         if (amount.signum() <= 0) {
@@ -46,5 +52,11 @@ public class BankAccount implements AccountOperation {
 
     public AccountType getAccountType() {
         return accountType;
+    }
+
+    @Override
+    public String toString() {
+        return "{id=" + getId() + ", accountType="
+                + getAccountType() + ", balance=" + getBalance() + "}";
     }
 }
