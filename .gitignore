@@ -12,3 +12,4 @@ build
 
 # Ignore docs folder
 docs/*
+app/bin/**
