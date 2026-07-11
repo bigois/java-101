@@ -13,8 +13,7 @@ public class FunctionalApp {
             return isValid;
         };
 
-        // Uses a lambda expression to validate whether the user is at least 18 years
-        // old
+        // Uses a lambda expression to validate whether the user is at least 18 years old
         Validator<User> minAgeValidator = user -> !user.getBirthDate().isAfter(LocalDate.now().minusYears(18));
 
         // Uses the Validator static method to show each result

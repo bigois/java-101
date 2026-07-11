@@ -27,6 +27,7 @@
 		"java.project.explorer.showNonJavaResources": true,
 		"files.eol": "\r\n",
 		"java.configuration.updateBuildConfiguration": "interactive",
-		"java.dependency.syncWithFolderExplorer": true
+		"java.dependency.syncWithFolderExplorer": true,
+        "java.format.comments.enabled": false
 	}
 }
