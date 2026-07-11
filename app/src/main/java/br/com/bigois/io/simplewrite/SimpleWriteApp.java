@@ -6,6 +6,9 @@ import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import br.com.bigois.httprequest.HttpRequestApp;
 
 public class SimpleWriteApp {
@@ -34,6 +37,10 @@ public class SimpleWriteApp {
 
     public static String getMatrixJson() {
         URI uri = HttpRequestApp.buildUri("Matrix");
-        return HttpRequestApp.sendRequest(uri);
+        String body = HttpRequestApp.sendRequest(uri);
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Object formattedJson = gson.fromJson(body, Object.class);
+        return gson.toJson(formattedJson);
     }
 }
