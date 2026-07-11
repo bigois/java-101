@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public record IMDbMovie(
         String title,
-        int year,
+        String year,
         String rated,
         String released,
         String runtime,
