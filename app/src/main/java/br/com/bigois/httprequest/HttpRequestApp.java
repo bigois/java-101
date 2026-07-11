@@ -2,9 +2,11 @@ package br.com.bigois.httprequest;
 
 import java.io.IOException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 import com.google.gson.FieldNamingPolicy;
@@ -30,21 +32,22 @@ public class HttpRequestApp {
     public static String getMovieTitle() {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter the movie title to search for: ");
-            String movie = sc.nextLine();
+            String title = sc.nextLine();
 
-            if (movie.isEmpty()) {
+            if (title.isEmpty()) {
                 System.out.println("Movie title cannot be empty. Please try again or type 'exit' to quit.");
                 return getMovieTitle();
             }
 
-            if (movie.equalsIgnoreCase("exit")) {
+            if (title.equalsIgnoreCase("exit")) {
                 System.out.println("Exiting the application.");
                 // Finalizes the program execution with a status code of 0, indicating
                 // successful termination.
                 System.exit(0);
             }
 
-            return movie;
+            // Encode the title to be URL-safe
+            return URLEncoder.encode(title, StandardCharsets.UTF_8);
         }
     }
 
