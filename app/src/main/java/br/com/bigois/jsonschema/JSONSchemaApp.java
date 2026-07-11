@@ -14,8 +14,7 @@ public class JSONSchemaApp {
         String schemaFileName = "user-schema.json";
         String jsonFileName = "user.json";
 
-        // Create an instance of JSONValidationService and validate the JSON file
-        // against the schema
+        // Create an instance of JSONValidationService and validate the JSON file against the schema
         JSONValidationService validationService = new JSONValidationService(schemaFileName);
         Set<ValidationMessage> validationMessages = validationService.validate(jsonFileName);
 

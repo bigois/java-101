@@ -19,8 +19,7 @@ public class SimpleReadApp {
 
             System.out.println(json);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 }

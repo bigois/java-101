@@ -41,8 +41,7 @@ public class HttpRequestApp {
 
             if (title.equalsIgnoreCase("exit")) {
                 System.out.println("Exiting the application.");
-                // Finalizes the program execution with a status code of 0, indicating
-                // successful termination.
+                // Finalizes the program execution with a status code of 0, indicating successful termination
                 System.exit(0);
             }
 
