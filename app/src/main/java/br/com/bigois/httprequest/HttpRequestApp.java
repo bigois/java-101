@@ -7,7 +7,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class HttpRequestApp {
     public static void main(String[] args) {
@@ -67,7 +69,7 @@ public class HttpRequestApp {
 
     // Finally, we need to parse the response and display the movie information
     public static IMDbMovie parseResponse(String response) {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         return gson.fromJson(response, IMDbMovie.class);
     }
 }
