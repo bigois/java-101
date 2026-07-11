@@ -1,4 +1,4 @@
-package br.com.bigois.io.simplewrite;
+package br.com.bigois.io.write.filewriter;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ import com.google.gson.GsonBuilder;
 
 import br.com.bigois.httprequest.HttpRequestApp;
 
-public class SimpleWriteApp {
+public class FileWriterApp {
     public static void main(String[] args) {
         Path filePath = Paths.get("docs", "matrix.json");
         File file = filePath.toFile();

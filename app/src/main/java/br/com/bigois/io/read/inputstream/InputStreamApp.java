@@ -1,4 +1,4 @@
-package br.com.bigois.io.simpleread;
+package br.com.bigois.io.read.inputstream;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,9 +6,9 @@ import java.nio.charset.StandardCharsets;
 
 import org.json.JSONObject;
 
-public class SimpleReadApp {
+public class InputStreamApp {
     public static void main(String[] args) {
-        try (InputStream inputStream = SimpleReadApp.class.getResourceAsStream("/sample.json")) {
+        try (InputStream inputStream = InputStreamApp.class.getResourceAsStream("/sample.json")) {
             if (inputStream == null) {
                 throw new IOException("Resource not found: sample.json");
             }
