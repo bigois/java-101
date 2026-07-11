@@ -7,13 +7,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.Gson;
+
 public class HttpRequestApp {
     public static void main(String[] args) {
-        String movie = getMovie();
-        URI uri = buildUri(movie);
+        String title = getMovieTitle();
+        URI uri = buildUri(title);
         String response = sendRequest(uri);
+        IMDbMovie movie = parseResponse(response);
 
-        System.out.println(response);
+        System.out.println(movie);
     }
 
     // First, we need to get the API key
@@ -22,14 +25,14 @@ public class HttpRequestApp {
     }
 
     // Next, we need to get the movie title from the user
-    public static String getMovie() {
+    public static String getMovieTitle() {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter the movie title to search for: ");
             String movie = sc.nextLine();
 
             if (movie.isEmpty()) {
                 System.out.println("Movie title cannot be empty. Please try again or type 'exit' to quit.");
-                return getMovie();
+                return getMovieTitle();
             }
 
             if (movie.equalsIgnoreCase("exit")) {
@@ -44,12 +47,12 @@ public class HttpRequestApp {
     }
 
     // Then, we need to build the URI for the HTTP request
-    public static URI buildUri(String movie) {
+    public static URI buildUri(String title) {
         String apiKey = getApiKey();
-        return URI.create("https://www.omdbapi.com/?t=" + movie + "&apikey=" + apiKey);
+        return URI.create("https://www.omdbapi.com/?t=" + title + "&apikey=" + apiKey);
     }
 
-    // Finally, we need to send the HTTP request and get the response
+    // Next, we need to send the HTTP request and get the response
     public static String sendRequest(URI uri) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(uri).build();
@@ -60,5 +63,11 @@ public class HttpRequestApp {
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException("Error sending HTTP request: " + e.getMessage(), e);
         }
+    }
+
+    // Finally, we need to parse the response and display the movie information
+    public static IMDbMovie parseResponse(String response) {
+        Gson gson = new Gson();
+        return gson.fromJson(response, IMDbMovie.class);
     }
 }
