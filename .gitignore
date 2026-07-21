@@ -12,4 +12,7 @@ build
 
 # Ignore docs folder
 docs/*
-app/bin/**
+app/bin/*
+
+# Ignore IntelliJ IDEA project files
+.idea/*
