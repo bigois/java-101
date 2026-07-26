@@ -24,16 +24,16 @@ dependencies {
     implementation libs.guava
 
     // Apache POI for XSSFWorkbook (xlsx generation)
-    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.23.1'
-    implementation 'org.apache.poi:poi-ooxml:5.2.5'
+    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.26.1'
+    implementation 'org.apache.poi:poi-ooxml:5.5.1'
 
     // JSON library for parsing JSON files
-    implementation 'org.json:json:20230227'
+    implementation 'org.json:json:20260522'
 
     // JSON Schema Validator for validating JSON against a schema
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j2-impl:2.23.1'
-    implementation 'com.networknt:json-schema-validator:1.4.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j2-impl:2.26.1'
+    implementation 'com.networknt:json-schema-validator:3.0.6'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.1'
 
     // Gson library for JSON serialization and deserialization
     implementation 'com.google.code.gson:gson:2.10.1'
