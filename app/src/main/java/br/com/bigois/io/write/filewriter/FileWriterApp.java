@@ -24,7 +24,7 @@ public class FileWriterApp {
         // Check if the file already exists and print a message if it does
         if (file.exists()) {
             System.out.println("File already exists at " + file.getAbsolutePath());
-            System.exit(1);
+            return;
         }
 
         try (FileWriter writer = new FileWriter(file)) {

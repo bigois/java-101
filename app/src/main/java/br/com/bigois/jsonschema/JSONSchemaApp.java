@@ -1,9 +1,9 @@
 package br.com.bigois.jsonschema;
 
+import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
-import com.networknt.schema.ValidationMessage;
+import com.networknt.schema.Error;
 
 public class JSONSchemaApp {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class JSONSchemaApp {
 
         // Create an instance of JSONValidationService and validate the JSON file against the schema
         JSONValidationService validationService = new JSONValidationService(schemaFileName);
-        Set<ValidationMessage> validationMessages = validationService.validate(jsonFileName);
+        List<Error> validationMessages = validationService.validate(jsonFileName);
 
         // Check if there are any validation errors
         if (validationMessages.isEmpty()) {
