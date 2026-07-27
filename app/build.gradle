@@ -8,7 +8,23 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java
     id 'application'
+
+    // Apply the Spring Boot plugin to add support for building Spring applications
+    id 'org.springframework.boot' version '4.1.0'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
+
+// Define the group and version of the project
+group = 'br.com.bigois'
+version = '0.0.1-SNAPSHOT'
+
+// Apply a specific Java toolchain to ease working on different environments
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 
 repositories {
     // Use Maven Central for resolving dependencies
@@ -37,21 +53,9 @@ dependencies {
 
     // Gson library for JSON serialization and deserialization
     implementation 'com.google.code.gson:gson:2.10.1'
-}
 
-// Apply a specific Java toolchain to ease working on different environments
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
-
-application {
-    // Define the main class for the application
-    mainClass = 'java.App'
-}
-
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
+    // Spring Boot dependencies for building a Spring application
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
