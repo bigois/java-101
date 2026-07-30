@@ -35,7 +35,7 @@ public class MethodReferenceApp {
 
 			return result;
 		};
-		int complex =  complexCalculator.calculateToValues(2, 3);
+		int complex = complexCalculator.calculateToValues(2, 3);
 		System.out.println(complex);
 	}
 }
