@@ -14,13 +14,13 @@ package br.com.bigois.interfaces.functional;
  * is also valid)
  */
 public interface Validator<T> {
-    /*
-     * The parameter name can be any valid identifier (e.g. T pineapple is also
-     * valid)
-     */
-    boolean isValid(T value);
+	static <T> void showValidatorResult(T value, Validator<T> validator) {
+		System.out.println(value + " is valid: " + validator.isValid(value));
+	}
 
-    static <T> void showValidatorResult(T value, Validator<T> validator) {
-        System.out.println(value + " is valid: " + validator.isValid(value));
-    }
+	/*
+	 * The parameter name can be any valid identifier (e.g. T pineapple is also
+	 * valid)
+	 */
+	boolean isValid(T value);
 }
