@@ -1,4 +1,4 @@
-package br.com.bigois.mapper;
+package br.com.bigois.mapper.simple;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

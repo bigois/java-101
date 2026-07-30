@@ -1,6 +1,8 @@
-package br.com.bigois.mapper;
+package br.com.bigois.mapper.simple;
 
-public class MapperApp {
+import br.com.bigois.mapper.EntityMapper;
+
+public class SimpleMapperApp {
 	public static void main(String[] args) {
 		EntityMapper mapper = new EntityMapper();
 		String json = """
