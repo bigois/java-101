@@ -1,0 +1,168 @@
+{
+    "id": 1,
+    "name": "Main Menu",
+    "description": "Restaurant's main menu",
+    "currency": "BRL",
+    "active": true,
+    "categories": [
+        {
+            "id": 101,
+            "name": "Main Courses",
+            "displayOrder": 1,
+            "items": [
+                {
+                    "id": 1001,
+                    "name": "Gyudon",
+                    "description": "Japanese rice bowl with beef and onions",
+                    "price": 39.90,
+                    "available": true,
+                    "preparationTimeMinutes": 20,
+                    "tags": [
+                        "japanese",
+                        "beef",
+                        "rice"
+                    ],
+                    "ingredients": [
+                        {
+                            "id": 1,
+                            "name": "Japanese rice",
+                            "quantity": 200.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 2,
+                            "name": "Beef",
+                            "quantity": 150.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 3,
+                            "name": "Onion",
+                            "quantity": 50.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 4,
+                            "name": "Soy sauce",
+                            "quantity": 30.0,
+                            "unit": "MILLILITER",
+                            "optional": false,
+                            "allergens": [
+                                "SOY",
+                                "GLUTEN"
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "name": "Green onion",
+                            "quantity": 10.0,
+                            "unit": "GRAM",
+                            "optional": true,
+                            "allergens": []
+                        }
+                    ]
+                },
+                {
+                    "id": 1002,
+                    "name": "Grilled Salmon",
+                    "description": "Grilled salmon served with vegetables",
+                    "price": 54.90,
+                    "available": true,
+                    "preparationTimeMinutes": 30,
+                    "tags": [
+                        "fish",
+                        "grilled",
+                        "gluten-free"
+                    ],
+                    "ingredients": [
+                        {
+                            "id": 6,
+                            "name": "Salmon fillet",
+                            "quantity": 220.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": [
+                                "FISH"
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "name": "Broccoli",
+                            "quantity": 80.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 8,
+                            "name": "Carrot",
+                            "quantity": 60.0,
+                            "unit": "GRAM",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 9,
+                            "name": "Olive oil",
+                            "quantity": 15.0,
+                            "unit": "MILLILITER",
+                            "optional": false,
+                            "allergens": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 102,
+            "name": "Beverages",
+            "displayOrder": 2,
+            "items": [
+                {
+                    "id": 2001,
+                    "name": "Lemonade",
+                    "description": "Fresh homemade lemonade",
+                    "price": 9.90,
+                    "available": true,
+                    "preparationTimeMinutes": 5,
+                    "tags": [
+                        "beverage",
+                        "fresh"
+                    ],
+                    "ingredients": [
+                        {
+                            "id": 10,
+                            "name": "Lemon",
+                            "quantity": 2.0,
+                            "unit": "UNIT",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 11,
+                            "name": "Water",
+                            "quantity": 300.0,
+                            "unit": "MILLILITER",
+                            "optional": false,
+                            "allergens": []
+                        },
+                        {
+                            "id": 12,
+                            "name": "Sugar",
+                            "quantity": 20.0,
+                            "unit": "GRAM",
+                            "optional": true,
+                            "allergens": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
