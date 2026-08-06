@@ -3,8 +3,10 @@ package br.com.bigois.streams;
 import br.com.bigois.io.FileReaderService;
 import br.com.bigois.mapper.EntityMapper;
 import br.com.bigois.mapper.nested.model.Menu;
+import org.eclipse.collections.impl.collector.BigDecimalSummaryStatistics;
 
 import java.io.IOException;
+import java.math.RoundingMode;
 
 public class StreamsApp {
 	public static void main(String[] args) throws IOException {
@@ -19,5 +21,12 @@ public class StreamsApp {
 		System.out.println("\nTags to remove:\n" + streamService.getTagsToRemove());
 		System.out.println("\nTop expensive items:\n" + streamService.getTopExpensiveItems());
 		System.out.println("\nTime to prepare all items:\n" + streamService.getTimeToPrepareAllItems());
+
+		BigDecimalSummaryStatistics priceStatistics = streamService.getPriceStatistics();
+		System.out.println("\nPrice statistics:");
+		System.out.println("- Average: " + priceStatistics.getAverage().setScale(2, RoundingMode.HALF_UP));
+		System.out.println("- Max: " + priceStatistics.getMax());
+		System.out.println("- Min: " + priceStatistics.getMin());
+		System.out.println("- Sum: " + priceStatistics.getSum());
 	}
 }
