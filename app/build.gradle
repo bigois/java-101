@@ -57,6 +57,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Eclipse Collections helpers for BigDecimal stream statistics
+    implementation("org.eclipse.collections:eclipse-collections:13.0.0")
 }
 
 tasks.named('test') {

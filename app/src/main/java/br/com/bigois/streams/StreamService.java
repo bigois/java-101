@@ -2,6 +2,8 @@ package br.com.bigois.streams;
 
 import br.com.bigois.mapper.nested.model.Item;
 import br.com.bigois.mapper.nested.model.Menu;
+import org.eclipse.collections.impl.collector.BigDecimalSummaryStatistics;
+import org.eclipse.collections.impl.collector.Collectors2;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -85,5 +87,15 @@ public class StreamService {
 				.flatMap(category -> category.items().stream())
 				.map(Item::preparationTimeMinutes)
 				.reduce(0, Integer::sum);
+	}
+
+	/*
+	 * Step 1: get all menu items from every category
+	 * Step 2: create a stream from the item list
+	 * Step 3: collect price statistics using each item price
+	 */
+	public BigDecimalSummaryStatistics getPriceStatistics() {
+		List<Item> menuItems = getAllItems();
+		return menuItems.stream().collect(Collectors2.summarizingBigDecimal(Item::price));
 	}
 }
