@@ -10,7 +10,12 @@ public class OpenAiApp {
 
 		// Translate a text to Brazilian Portuguese using the OpenApiService
 		OpenApiService openApiService = new OpenApiService();
-		String response = openApiService.translateToBrazilianPortuguese("It's simple, but it helped me structure the topic clearly.");
-		System.out.println("Response: " + response);
+		String openAPIresponse = openApiService.translateToBrazilianPortuguese("It's simple, but it helped me structure the topic clearly.");
+		System.out.println("OpenAI response: " + openAPIresponse);
+
+		// Translate a text to Brazilian Portuguese using the MyMemoryService
+		MyMemoryService myMemoryService = new MyMemoryService();
+		String myMemoryResponse = myMemoryService.translateToBrazilianPortuguese("It's simple, but it helped me structure the topic clearly.");
+		System.out.println("MyMemory response: " + myMemoryResponse);
 	}
 }
