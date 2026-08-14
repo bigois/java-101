@@ -60,6 +60,9 @@ dependencies {
 
     // Eclipse Collections helpers for BigDecimal stream statistics
     implementation("org.eclipse.collections:eclipse-collections:13.0.0")
+
+    // OpenAI Java SDK for interacting with OpenAI APIs
+    implementation("com.openai:openai-java:4.50.0")
 }
 
 tasks.named('test') {
