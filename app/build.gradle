@@ -64,10 +64,13 @@ dependencies {
     // OpenAI Java SDK for interacting with OpenAI APIs
     implementation("com.openai:openai-java:4.50.0")
 
-    // Spring Boot Data JPA for database access and PostgreSQL driver
+    // Spring Boot Data JPA for database access
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+
+    // Database drivers
+    runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
 }
 
 tasks.withType(JavaCompile).configureEach {
