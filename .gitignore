@@ -16,3 +16,4 @@ app/bin/*
 
 # Ignore IntelliJ IDEA project files
 .idea/*
+/app/src/main/java/br/com/bigois/springboot/*
