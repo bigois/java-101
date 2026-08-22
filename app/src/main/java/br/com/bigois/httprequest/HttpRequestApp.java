@@ -25,7 +25,11 @@ public class HttpRequestApp {
 
 	// First, we need to get the API key
 	public static String getApiKey() {
-		return "afc8871";
+		String apiKey = System.getenv("OMDB_API_KEY");
+		if (apiKey == null || apiKey.isBlank()) {
+			throw new RuntimeException("Environment variable OMDB_API_KEY must be set");
+		}
+		return apiKey;
 	}
 
 	// Next, we need to get the movie title from the user
@@ -61,7 +65,7 @@ public class HttpRequestApp {
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(uri).build();
 
-		try {
+		try (client) {
 			HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 			return response.body();
 		} catch (IOException | InterruptedException e) {
