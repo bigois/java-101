@@ -1,4 +1,3 @@
-
 package br.com.bigois.mapper.nested;
 
 import org.junit.jupiter.api.Test;

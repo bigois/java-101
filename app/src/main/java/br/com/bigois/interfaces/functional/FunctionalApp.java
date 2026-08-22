@@ -1,4 +1,3 @@
-
 package br.com.bigois.interfaces.functional;
 
 import java.time.LocalDate;

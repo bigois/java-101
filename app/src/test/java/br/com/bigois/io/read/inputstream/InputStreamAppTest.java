@@ -1,4 +1,3 @@
-
 package br.com.bigois.io.read.inputstream;
 
 import org.junit.jupiter.api.Test;

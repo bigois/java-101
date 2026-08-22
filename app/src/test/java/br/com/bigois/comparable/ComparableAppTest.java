@@ -1,4 +1,3 @@
-
 package br.com.bigois.comparable;
 
 import org.junit.jupiter.api.Test;

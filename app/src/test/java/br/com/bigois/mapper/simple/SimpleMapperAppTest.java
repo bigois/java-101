@@ -1,4 +1,3 @@
-
 package br.com.bigois.mapper.simple;
 
 import org.junit.jupiter.api.Test;

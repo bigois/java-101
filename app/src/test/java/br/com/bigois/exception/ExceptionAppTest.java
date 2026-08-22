@@ -1,4 +1,3 @@
-
 package br.com.bigois.exception;
 
 import org.junit.jupiter.api.Test;

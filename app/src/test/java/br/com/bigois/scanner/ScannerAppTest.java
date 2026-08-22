@@ -1,4 +1,3 @@
-
 package br.com.bigois.scanner;
 
 import org.junit.jupiter.api.Test;

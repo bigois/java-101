@@ -1,4 +1,3 @@
-
 package br.com.bigois.optional;
 
 import org.junit.jupiter.api.Test;

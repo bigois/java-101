@@ -1,4 +1,3 @@
-
 package br.com.bigois.httprequest;
 
 import com.google.gson.FieldNamingPolicy;

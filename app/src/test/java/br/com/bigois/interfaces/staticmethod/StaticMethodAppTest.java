@@ -1,4 +1,3 @@
-
 package br.com.bigois.interfaces.staticmethod;
 
 import org.junit.jupiter.api.Test;

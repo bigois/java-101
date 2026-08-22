@@ -1,4 +1,3 @@
-
 package br.com.bigois.polymorphism;
 
 import org.junit.jupiter.api.Test;

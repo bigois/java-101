@@ -1,4 +1,3 @@
-
 package br.com.bigois.interfaces.staticmethod;
 
 public interface Greeting {
