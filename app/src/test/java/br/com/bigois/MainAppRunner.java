@@ -3,6 +3,7 @@ package br.com.bigois;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.Set;
 
 public class MainAppRunner {
 	private MainAppRunner() {
@@ -14,6 +15,11 @@ public class MainAppRunner {
 
 	public static int runInNewProcess(Class<?> mainClass, String input, Path workingDirectory)
 			throws IOException, InterruptedException {
+		return runInNewProcess(mainClass, input, workingDirectory, Set.of());
+	}
+
+	public static int runInNewProcess(Class<?> mainClass, String input, Path workingDirectory,
+			Set<String> environmentVariablesToClear) throws IOException, InterruptedException {
 		ProcessBuilder processBuilder = new ProcessBuilder(
 				javaExecutable(),
 				"-cp",
@@ -25,6 +31,8 @@ public class MainAppRunner {
 		if (workingDirectory != null) {
 			processBuilder.directory(workingDirectory.toFile());
 		}
+
+		environmentVariablesToClear.forEach(processBuilder.environment()::remove);
 
 		Process process = processBuilder.start();
 
