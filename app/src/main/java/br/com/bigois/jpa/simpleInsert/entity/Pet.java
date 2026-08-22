@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Table(name = "pets")
 public class Pet {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 
 	@Column(nullable = false)
