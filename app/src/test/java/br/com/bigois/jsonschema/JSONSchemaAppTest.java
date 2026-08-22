@@ -1,4 +1,3 @@
-
 package br.com.bigois.jsonschema;
 
 import org.junit.jupiter.api.Test;

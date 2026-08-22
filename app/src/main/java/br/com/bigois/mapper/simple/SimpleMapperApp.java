@@ -1,4 +1,3 @@
-
 package br.com.bigois.mapper.simple;
 
 import br.com.bigois.mapper.EntityMapper;

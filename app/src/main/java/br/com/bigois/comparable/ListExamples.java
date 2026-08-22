@@ -1,4 +1,3 @@
-
 package br.com.bigois.comparable;
 
 import br.com.bigois.interfaces.classicinterface.AccountType;

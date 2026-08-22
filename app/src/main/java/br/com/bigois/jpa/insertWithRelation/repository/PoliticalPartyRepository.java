@@ -1,4 +1,3 @@
-
 package br.com.bigois.jpa.insertWithRelation.repository;
 
 import br.com.bigois.jpa.insertWithRelation.entity.PoliticalParty;

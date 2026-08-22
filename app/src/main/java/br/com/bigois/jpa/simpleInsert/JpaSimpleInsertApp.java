@@ -1,4 +1,3 @@
-
 package br.com.bigois.jpa.simpleInsert;
 
 import br.com.bigois.jpa.simpleInsert.entity.AnimalType;

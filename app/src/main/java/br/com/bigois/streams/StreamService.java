@@ -1,4 +1,3 @@
-
 package br.com.bigois.streams;
 
 import br.com.bigois.mapper.nested.model.Item;

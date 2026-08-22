@@ -1,4 +1,3 @@
-
 package br.com.bigois.interfaces.classicinterface;
 
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,3 @@
-
 package br.com.bigois.exception;
 
 import br.com.bigois.interfaces.classicinterface.BankAccount;

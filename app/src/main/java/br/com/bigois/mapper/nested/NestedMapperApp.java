@@ -1,4 +1,3 @@
-
 package br.com.bigois.mapper.nested;
 
 import br.com.bigois.io.FileReaderService;

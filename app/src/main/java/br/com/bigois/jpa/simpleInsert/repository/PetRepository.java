@@ -1,4 +1,3 @@
-
 package br.com.bigois.jpa.simpleInsert.repository;
 
 import br.com.bigois.jpa.simpleInsert.entity.Pet;

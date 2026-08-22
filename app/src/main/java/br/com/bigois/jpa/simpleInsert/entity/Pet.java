@@ -1,9 +1,6 @@
-
 package br.com.bigois.jpa.simpleInsert.entity;
 
 import jakarta.persistence.*;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 @Entity
 @Table(name = "pets")

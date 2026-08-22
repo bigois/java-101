@@ -1,4 +1,3 @@
-
 package br.com.bigois.openai;
 
 import br.com.bigois.httprequest.HttpRequestApp;
