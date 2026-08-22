@@ -1,4 +1,6 @@
+
 package br.com.bigois.mapper.dto;
+
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

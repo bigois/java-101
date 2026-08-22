@@ -1,3 +1,4 @@
+
 package br.com.bigois.autocloseable;
 
 import br.com.bigois.optional.Person;

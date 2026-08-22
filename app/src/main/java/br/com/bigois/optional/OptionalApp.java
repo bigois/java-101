@@ -1,3 +1,4 @@
+
 package br.com.bigois.optional;
 
 public class OptionalApp {

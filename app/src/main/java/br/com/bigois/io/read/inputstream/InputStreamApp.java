@@ -1,3 +1,4 @@
+
 package br.com.bigois.io.read.inputstream;
 
 import br.com.bigois.io.FileReaderService;

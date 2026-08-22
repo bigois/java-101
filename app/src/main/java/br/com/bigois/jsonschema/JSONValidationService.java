@@ -1,3 +1,4 @@
+
 package br.com.bigois.jsonschema;
 
 import com.networknt.schema.*;

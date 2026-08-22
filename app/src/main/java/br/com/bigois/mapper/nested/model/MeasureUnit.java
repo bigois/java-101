@@ -1,3 +1,4 @@
+
 package br.com.bigois.mapper.nested.model;
 
 public enum MeasureUnit {

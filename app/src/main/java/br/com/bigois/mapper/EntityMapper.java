@@ -1,3 +1,4 @@
+
 package br.com.bigois.mapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

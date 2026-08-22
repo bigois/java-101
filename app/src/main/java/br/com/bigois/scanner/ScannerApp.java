@@ -1,3 +1,4 @@
+
 package br.com.bigois.scanner;
 
 import java.util.Scanner;

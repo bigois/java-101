@@ -1,3 +1,4 @@
+
 package br.com.bigois.mapper.nested.model;
 
 import java.util.Currency;

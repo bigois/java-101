@@ -1,3 +1,4 @@
+
 package br.com.bigois.mapper.simple;
 
 import com.fasterxml.jackson.annotation.JsonAlias;

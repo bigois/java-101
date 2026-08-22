@@ -1,3 +1,4 @@
+
 package br.com.bigois.exception;
 
 public class UnauthorizedAccessException extends Exception {
