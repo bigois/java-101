@@ -1,3 +1,4 @@
+
 package br.com.bigois.interfaces.functional;
 
 // The java.time package is the modern Java API for date and time, introduced in Java 8

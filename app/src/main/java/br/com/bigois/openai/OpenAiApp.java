@@ -1,3 +1,4 @@
+
 package br.com.bigois.openai;
 
 import java.io.PrintStream;

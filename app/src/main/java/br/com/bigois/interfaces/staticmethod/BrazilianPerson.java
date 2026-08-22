@@ -1,3 +1,4 @@
+
 package br.com.bigois.interfaces.staticmethod;
 
 public class BrazilianPerson implements Greeting {

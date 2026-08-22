@@ -1,3 +1,4 @@
+
 package br.com.bigois.comparable;
 
 public class ComparableApp {

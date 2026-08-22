@@ -1,3 +1,4 @@
+
 package br.com.bigois.jpa.simpleInsert.entity;
 
 public enum AnimalType {

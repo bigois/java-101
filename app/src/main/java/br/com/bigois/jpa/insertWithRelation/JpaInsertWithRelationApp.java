@@ -1,3 +1,4 @@
+
 package br.com.bigois.jpa.insertWithRelation;
 
 import br.com.bigois.jpa.insertWithRelation.entity.Candidate;
@@ -28,7 +29,7 @@ public class JpaInsertWithRelationApp implements CommandLineRunner {
 		PoliticalParty pl = politicalPartyRepository.findById(2L).orElseThrow(() -> new RuntimeException("Political party (PL) not found"));
 		PoliticalParty pt = politicalPartyRepository.findById(1L).orElseThrow(() -> new RuntimeException("Political party (PT) not found"));
 
-		Candidate flavioBolsonaro = new Candidate("Fl·vio Bolsonaro", pl);
+		Candidate flavioBolsonaro = new Candidate("Fl√°vio Bolsonaro", pl);
 		Candidate fernandoHaddad = new Candidate("Fernando Haddad", pt);
 
 		candidateRepository.save(flavioBolsonaro);
