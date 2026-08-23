@@ -1,6 +1,6 @@
 package br.com.bigois.jpa.viewWithRelation;
 
-import br.com.bigois.jpa.viewWithRelation.repository.Product;
+import br.com.bigois.jpa.viewWithRelation.entity.Product;
 import br.com.bigois.jpa.viewWithRelation.repository.ProductRepository;
 import org.jspecify.annotations.NonNull;
 import org.springframework.boot.ApplicationArguments;

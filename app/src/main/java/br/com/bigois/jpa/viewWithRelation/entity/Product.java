@@ -1,6 +1,7 @@
-package br.com.bigois.jpa.viewWithRelation.repository;
+package br.com.bigois.jpa.viewWithRelation.entity;
 
-import br.com.bigois.jpa.viewWithRelation.utils.TrimTrailingConverter;
+import br.com.bigois.jpa.viewWithRelation.converter.TrimTrailingConverter;
+import br.com.bigois.jpa.viewWithRelation.id.ProductId;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,10 +9,10 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @ToString
+@Entity
+@Table(name = "SB1990")
 @IdClass(ProductId.class)
-@Table(name = "SB1990", schema = "dbo")
 public class Product {
 	// JPA converters are not supported for identifier attributes,
 	// so trailing spaces are removed only when exposing the value

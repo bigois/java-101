@@ -1,4 +1,4 @@
-package br.com.bigois.jpa.viewWithRelation.repository;
+package br.com.bigois.jpa.viewWithRelation.id;
 
 import lombok.*;
 
