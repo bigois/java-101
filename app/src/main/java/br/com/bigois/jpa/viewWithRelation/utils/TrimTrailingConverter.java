@@ -1,4 +1,4 @@
-package br.com.bigois.jpa.viewWithRelation.converter;
+package br.com.bigois.jpa.viewWithRelation.utils;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
