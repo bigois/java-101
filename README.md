@@ -1,4 +1,4 @@
-# java-101
+# java101
 
 This is a study project where I collect practical examples of language features and ecosystem libraries, from basics to more advanced topics, as I learn (or review) each subject.
 
