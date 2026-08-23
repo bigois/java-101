@@ -29,6 +29,7 @@ public class Product {
 	@Convert(converter = TrimTrailingConverter.class)
 	private String description;
 
+	// @ManyToOne join direction: parent column -> child column
 	@ManyToOne
 	@JoinColumn(name = "B1_UM", referencedColumnName = "AH_UNIMED")
 	private UnitOfMeasure unitOfMeasure;
