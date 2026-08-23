@@ -1,6 +1,6 @@
 package br.com.bigois.jpa.viewWithRelation.repository;
 
-import br.com.bigois.jpa.viewWithRelation.converter.TrimTrailingConverter;
+import br.com.bigois.jpa.viewWithRelation.utils.TrimTrailingConverter;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,12 +8,17 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
+@ToString
+@IdClass(ProductId.class)
 @Table(name = "SB1990", schema = "dbo")
 public class Product {
 	// JPA converters are not supported for identifier attributes,
 	// so trailing spaces are removed only when exposing the value
+	@Id
+	@Column(name = "B1_FILIAL")
+	private String branch;
+
 	@Id
 	@Column(name = "B1_COD")
 	private String code;
@@ -22,15 +27,4 @@ public class Product {
 	@Column(name = "B1_DESC")
 	@Convert(converter = TrimTrailingConverter.class)
 	private String description;
-
-	// Lombok's @ToString uses getters by default, so the displayed code is trimmed
-	// while the original database value remains stored internally
-	public String getCode() {
-		return code == null ? null : code.stripTrailing();
-	}
-
-	// Returns the original value exactly as loaded from the database
-	public String getRawCode() {
-		return code;
-	}
 }
