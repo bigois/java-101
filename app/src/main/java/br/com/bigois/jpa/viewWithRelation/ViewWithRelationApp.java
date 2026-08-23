@@ -1,7 +1,7 @@
 package br.com.bigois.jpa.viewWithRelation;
 
-import br.com.bigois.jpa.viewWithRelation.entity.Product;
-import br.com.bigois.jpa.viewWithRelation.repository.ProductRepository;
+import br.com.bigois.jpa.viewWithRelation.entity.SalesOrder;
+import br.com.bigois.jpa.viewWithRelation.repository.SalesOrderRepository;
 import org.jspecify.annotations.NonNull;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -12,10 +12,10 @@ import java.util.List;
 
 @SpringBootApplication
 public class ViewWithRelationApp implements ApplicationRunner {
-	private final ProductRepository productRepository;
+	private final SalesOrderRepository salesOrderRepository;
 
-	public ViewWithRelationApp(ProductRepository productRepository) {
-		this.productRepository = productRepository;
+	public ViewWithRelationApp(SalesOrderRepository salesOrderRepository) {
+		this.salesOrderRepository = salesOrderRepository;
 	}
 
 	public static void main(String[] args) {
@@ -24,8 +24,8 @@ public class ViewWithRelationApp implements ApplicationRunner {
 
 	@Override
 	public void run(@NonNull ApplicationArguments args) {
-		List<Product> products = productRepository.findAll();
-		System.out.println("Total products: " + products.size());
-		System.out.println(products);
+		List<SalesOrder> salesOrders = salesOrderRepository.findAll();
+		System.out.println("Total sales orders: " + salesOrders.size());
+		System.out.println(salesOrders);
 	}
 }
