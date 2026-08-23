@@ -1,5 +1,6 @@
 package br.com.bigois.jpa.viewWithRelation.entity;
 
+import br.com.bigois.jpa.viewWithRelation.converter.TrimTrailingConverter;
 import br.com.bigois.jpa.viewWithRelation.id.UnitOfMeasureId;
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,5 +23,6 @@ public class UnitOfMeasure {
 	private String code;
 
 	@Column(name = "AH_DESCPO")
+	@Convert(converter = TrimTrailingConverter.class)
 	private String description;
 }
