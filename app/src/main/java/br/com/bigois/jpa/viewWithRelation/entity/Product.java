@@ -28,4 +28,8 @@ public class Product {
 	@Column(name = "B1_DESC")
 	@Convert(converter = TrimTrailingConverter.class)
 	private String description;
+
+	@ManyToOne
+	@JoinColumn(name = "B1_UM", referencedColumnName = "AH_UNIMED")
+	private UnitOfMeasure unitOfMeasure;
 }
