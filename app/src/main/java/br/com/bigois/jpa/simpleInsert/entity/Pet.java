@@ -1,7 +1,9 @@
 package br.com.bigois.jpa.simpleInsert.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
 @Table(name = "pets")
 public class Pet {
@@ -18,6 +20,9 @@ public class Pet {
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	AnimalType type;
+
+	@Transient
+	boolean hasHealthPlan;
 
 	public Pet() {
 	}
