@@ -1,14 +1,75 @@
-INSERT INTO political_parties (id, name)
-SELECT 1, 'PT' WHERE NOT EXISTS (
-	SELECT 1 FROM political_parties WHERE id = 1
-);
+INSERT INTO political_parties (id, name) VALUES
+(1, 'PT'),
+(2, 'PL'),
+(3, 'MDB')
+ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO political_parties (id, name)
-SELECT 2, 'PL' WHERE NOT EXISTS (
-	SELECT 1 FROM political_parties WHERE id = 2
-);
-
-INSERT INTO political_parties (id, name)
-SELECT 3, 'MDB' WHERE NOT EXISTS (
-	SELECT 1 FROM political_parties WHERE id = 3
-);
+INSERT INTO employees (id, first_name, last_name, job_title, login_id, birth_date, marital_status, gender, hire_date, vacation_hours, sick_leave_hours) VALUES
+(1, 'Ken', 'Sánchez', 'Chief Executive Officer', 'adventure-works\ken0', '1969-01-29', 'S', 'M', '2009-01-14', 99, 69),
+(2, 'Terri', 'Duffy', 'Vice President of Engineering', 'adventure-works\terri0', '1971-08-01', 'S', 'F', '2008-01-31', 1, 20),
+(3, 'Roberto', 'Tamburello', 'Engineering Manager', 'adventure-works\roberto0', '1974-11-12', 'M', 'M', '2007-11-11', 2, 21),
+(4, 'Rob', 'Walters', 'Senior Tool Designer', 'adventure-works\rob0', '1974-12-23', 'S', 'M', '2007-12-05', 48, 80),
+(5, 'Gail', 'Erickson', 'Design Engineer', 'adventure-works\gail0', '1952-09-27', 'M', 'F', '2008-01-06', 5, 22),
+(7, 'Dylan', 'Miller', 'Research and Development Manager', 'adventure-works\dylan0', '1987-02-24', 'M', 'M', '2009-02-08', 61, 50),
+(8, 'Diane', 'Margheim', 'Research and Development Engineer', 'adventure-works\diane1', '1986-06-05', 'S', 'F', '2008-12-29', 62, 51),
+(12, 'Thierry', 'D''Hers', 'Tool Designer', 'adventure-works\thierry0', '1959-07-29', 'M', 'M', '2007-12-11', 9, 24),
+(14, 'Michael', 'Sullivan', 'Senior Design Engineer', 'adventure-works\michael8', '1979-06-16', 'S', 'M', '2010-12-30', 3, 21),
+(16, 'David', 'Bradley', 'Marketing Manager', 'adventure-works\david0', '1975-03-19', 'S', 'M', '2007-12-20', 40, 40),
+(17, 'Kevin', 'Brown', 'Marketing Assistant', 'adventure-works\kevin0', '1987-05-03', 'S', 'M', '2007-01-26', 42, 41),
+(18, 'John', 'Wood', 'Marketing Specialist', 'adventure-works\john5', '1978-03-06', 'S', 'M', '2011-02-07', 48, 44),
+(25, 'James', 'Hamilton', 'Vice President of Production', 'adventure-works\james1', '1983-01-07', 'S', 'M', '2009-02-03', 64, 52),
+(26, 'Peter', 'Krebs', 'Production Control Manager', 'adventure-works\peter0', '1982-11-03', 'M', 'M', '2008-12-01', 43, 41),
+(27, 'Jo', 'Brown', 'Production Supervisor - WC60', 'adventure-works\jo0', '1956-10-08', 'S', 'F', '2008-02-27', 80, 60),
+(28, 'Guy', 'Gilbert', 'Production Technician - WC60', 'adventure-works\guy1', '1988-03-13', 'M', 'M', '2006-06-30', 21, 30),
+(47, 'Andrew', 'Hill', 'Production Supervisor - WC10', 'adventure-works\andrew0', '1988-09-06', 'S', 'M', '2009-02-22', 65, 52),
+(48, 'Ruth', 'Ellerbrock', 'Production Technician - WC10', 'adventure-works\ruth0', '1956-06-04', 'M', 'F', '2008-01-06', 83, 61),
+(55, 'Taylor', 'Maxwell', 'Production Supervisor - WC50', 'adventure-works\taylor0', '1956-04-01', 'M', 'M', '2008-02-08', 79, 59),
+(56, 'Denise', 'Smith', 'Production Technician - WC50', 'adventure-works\denise0', '1988-07-06', 'M', 'F', '2009-02-05', 9, 24),
+(71, 'Michael', 'Ray', 'Production Supervisor - WC30', 'adventure-works\michael3', '1989-01-29', 'S', 'M', '2009-02-15', 70, 55),
+(72, 'Steven', 'Selikoff', 'Production Technician - WC30', 'adventure-works\steven0', '1977-05-14', 'M', 'M', '2008-12-01', 41, 40),
+(78, 'Reuben', 'D''sa', 'Production Supervisor - WC40', 'adventure-works\reuben0', '1987-08-27', 'M', 'M', '2008-12-15', 72, 56),
+(79, 'Eric', 'Brown', 'Production Technician - WC40', 'adventure-works\eric1', '1966-12-08', 'M', 'M', '2010-01-24', 60, 50),
+(121, 'Pilar', 'Ackerman', 'Shipping and Receiving Supervisor', 'adventure-works\pilar0', '1972-09-09', 'S', 'M', '2009-01-02', 93, 66),
+(122, 'Susan', 'Eaton', 'Stocker', 'adventure-works\susan0', '1978-02-17', 'S', 'F', '2008-12-07', 97, 68),
+(123, 'Vamsi', 'Kuppa', 'Shipping and Receiving Clerk', 'adventure-works\vamsi0', '1977-03-18', 'M', 'M', '2008-12-07', 95, 67),
+(134, 'Eric', 'Gubbels', 'Production Supervisor - WC20', 'adventure-works\eric0', '1985-01-19', 'M', 'M', '2009-01-14', 40, 40),
+(135, 'Ivo', 'Salmre', 'Production Technician - WC20', 'adventure-works\ivo0', '1982-01-03', 'M', 'M', '2008-12-04', 9, 24),
+(160, 'Jeff', 'Hay', 'Production Supervisor - WC45', 'adventure-works\jeff0', '1977-01-15', 'M', 'M', '2009-01-21', 74, 57),
+(161, 'Kirk', 'Koenigsbauer', 'Production Technician - WC45', 'adventure-works\kirk0', '1985-02-06', 'S', 'M', '2008-12-15', 74, 57),
+(211, 'Hazem', 'Abolrous', 'Quality Assurance Manager', 'adventure-works\hazem0', '1977-10-26', 'S', 'M', '2009-02-28', 80, 60),
+(212, 'Peng', 'Wu', 'Quality Assurance Supervisor', 'adventure-works\peng0', '1976-03-18', 'M', 'M', '2008-12-09', 81, 60),
+(213, 'Sootha', 'Charncherngkha', 'Quality Assurance Technician', 'adventure-works\sootha0', '1966-12-05', 'M', 'M', '2010-02-23', 85, 62),
+(217, 'Zainal', 'Arifin', 'Document Control Manager', 'adventure-works\zainal0', '1976-01-30', 'M', 'M', '2009-01-04', 77, 58),
+(218, 'Tengiz', 'Kharatishvili', 'Control Specialist', 'adventure-works\tengiz0', '1990-04-28', 'S', 'M', '2008-12-16', 76, 58),
+(219, 'Sean', 'Chai', 'Document Control Assistant', 'adventure-works\sean1', '1987-03-12', 'S', 'M', '2009-01-22', 78, 59),
+(222, 'A. Scott', 'Wright', 'Master Scheduler', 'adventure-works\ascott0', '1968-09-17', 'S', 'M', '2008-12-12', 44, 42),
+(223, 'Sairaj', 'Uddin', 'Scheduling Assistant', 'adventure-works\sairaj0', '1987-12-22', 'M', 'M', '2009-01-26', 46, 43),
+(227, 'Gary', 'Altman', 'Facilities Manager', 'adventure-works\gary1', '1971-02-18', 'M', 'M', '2009-12-02', 86, 63),
+(228, 'Christian', 'Kleinerman', 'Maintenance Supervisor', 'adventure-works\christian0', '1976-01-18', 'M', 'M', '2008-12-14', 92, 66),
+(229, 'Lori', 'Penor', 'Janitor', 'adventure-works\lori1', '1970-07-31', 'M', 'F', '2010-02-16', 90, 65),
+(233, 'Magnus', 'Hedlund', 'Facilities Administrative Assistant', 'adventure-works\magnus0', '1971-08-27', 'M', 'M', '2009-12-21', 87, 63),
+(234, 'Laura', 'Norman', 'Chief Financial Officer', 'adventure-works\laura1', '1976-01-06', 'M', 'F', '2009-01-31', 0, 20),
+(235, 'Paula', 'Barreto de Mattos', 'Human Resources Manager', 'adventure-works\paula0', '1976-02-11', 'M', 'F', '2008-12-06', 54, 47),
+(236, 'Grant', 'Culbertson', 'Human Resources Administrative Assistant', 'adventure-works\grant0', '1976-04-16', 'S', 'M', '2009-02-25', 53, 46),
+(238, 'Vidur', 'Luthra', 'Recruiter', 'adventure-works\vidur0', '1984-08-01', 'S', 'M', '2009-01-01', 50, 45),
+(239, 'Mindy', 'Martin', 'Benefits Specialist', 'adventure-works\mindy0', '1984-11-20', 'M', 'F', '2008-12-25', 51, 45),
+(241, 'David', 'Liu', 'Accounts Manager', 'adventure-works\david6', '1983-07-08', 'M', 'M', '2009-01-30', 57, 48),
+(242, 'Deborah', 'Poe', 'Accounts Receivable Specialist', 'adventure-works\deborah0', '1976-03-06', 'M', 'F', '2008-12-18', 60, 50),
+(245, 'Barbara', 'Moreland', 'Accountant', 'adventure-works\barbara1', '1976-01-04', 'M', 'F', '2009-02-18', 58, 49),
+(246, 'Dragan', 'Tomic', 'Accounts Payable Specialist', 'adventure-works\dragan0', '1977-02-14', 'M', 'M', '2009-02-11', 63, 51),
+(249, 'Wendy', 'Kahn', 'Finance Manager', 'adventure-works\wendy0', '1984-10-11', 'S', 'F', '2008-12-25', 55, 47),
+(250, 'Sheela', 'Word', 'Purchasing Manager', 'adventure-works\sheela0', '1978-02-10', 'S', 'F', '2011-02-25', 49, 44),
+(251, 'Mikael', 'Sandberg', 'Buyer', 'adventure-works\mikael0', '1984-08-17', 'S', 'M', '2009-02-10', 59, 49),
+(260, 'Annette', 'Hill', 'Purchasing Assistant', 'adventure-works\annette0', '1978-01-29', 'M', 'F', '2010-12-06', 50, 45),
+(262, 'David', 'Barber', 'Assistant to the Chief Financial Officer', 'adventure-works\david5', '1964-06-21', 'S', 'M', '2009-01-12', 56, 48),
+(263, 'Jean', 'Trenary', 'Information Services Manager', 'adventure-works\jean0', '1975-12-13', 'S', 'F', '2008-12-11', 65, 52),
+(264, 'Stephanie', 'Conroy', 'Network Manager', 'adventure-works\stephanie0', '1984-03-25', 'S', 'F', '2009-02-04', 68, 54),
+(265, 'Ashvini', 'Sharma', 'Network Administrator', 'adventure-works\ashvini0', '1977-03-27', 'S', 'M', '2008-12-04', 70, 55),
+(267, 'Karen', 'Berg', 'Application Specialist', 'adventure-works\karen1', '1978-05-19', 'S', 'F', '2009-02-16', 74, 57),
+(270, 'François', 'Ajenstat', 'Database Administrator', 'adventure-works\françois0', '1975-05-17', 'S', 'M', '2009-01-17', 67, 53),
+(273, 'Brian', 'Welcker', 'Vice President of Sales', 'adventure-works\brian3', '1977-06-06', 'S', 'M', '2011-02-15', 10, 25),
+(274, 'Stephen', 'Jiang', 'North American Sales Manager', 'adventure-works\stephen0', '1951-10-17', 'M', 'M', '2011-01-04', 14, 27),
+(275, 'Michael', 'Blythe', 'Sales Representative', 'adventure-works\michael9', '1968-12-25', 'S', 'M', '2011-05-31', 38, 39),
+(285, 'Syed', 'Abbas', 'Pacific Sales Manager', 'adventure-works\syed0', '1975-01-11', 'M', 'M', '2013-03-14', 20, 30),
+(287, 'Amy', 'Alberts', 'European Sales Manager', 'adventure-works\amy0', '1957-09-20', 'M', 'F', '2012-04-16', 21, 30)
+ON CONFLICT (id) DO NOTHING;
