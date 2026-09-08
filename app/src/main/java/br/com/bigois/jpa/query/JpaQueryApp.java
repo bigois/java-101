@@ -8,6 +8,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class JpaQueryApp implements ApplicationRunner {
 	private final PlanetRepository planetRepository;
@@ -27,5 +29,9 @@ public class JpaQueryApp implements ApplicationRunner {
 
 		Planet smallerPlanet = planetRepository.getSmallerPlanetWithJpql();
 		System.out.println("Smaller Planet: " + smallerPlanet);
+
+		List<Planet> planetsWithMoonCountGreaterThan = planetRepository.getPlanetsWithMoonCountGreaterThan(100);
+		System.out.println("Planets with moon count greater than 100:");
+		planetsWithMoonCountGreaterThan.forEach(System.out::println);
 	}
 }
