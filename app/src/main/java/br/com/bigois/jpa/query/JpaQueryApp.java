@@ -33,5 +33,9 @@ public class JpaQueryApp implements ApplicationRunner {
 		List<Planet> planetsWithMoonCountGreaterThan = planetRepository.getPlanetsWithMoonCountGreaterThan(100);
 		System.out.println("Planets with moon count greater than 100:");
 		planetsWithMoonCountGreaterThan.forEach(System.out::println);
+
+		List<Planet> planetsFromGalaxiesWithSizeGreaterThan = planetRepository.getPlanetsFromGalaxiesWithSizeGreaterThan(150000L);
+		System.out.println("Planets from galaxies with size greater than 150000:");
+		planetsFromGalaxiesWithSizeGreaterThan.forEach(System.out::println);
 	}
 }

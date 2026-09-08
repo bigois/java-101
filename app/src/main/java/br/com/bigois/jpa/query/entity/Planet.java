@@ -4,12 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import lombok.ToString;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table(name = "planets")
 public class Planet {
@@ -24,4 +22,19 @@ public class Planet {
 
 	@Column(name = "moon_count")
 	private Integer moonCount;
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "galaxy_id", referencedColumnName = "id")
+	private Galaxy galaxy;
+
+	@Override
+	public String toString() {
+		return "Planet(" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", size=" + size +
+				", moonCount=" + moonCount +
+				", galaxy=" + galaxy.getName() +
+				')';
+	}
 }

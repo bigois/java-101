@@ -15,4 +15,7 @@ public interface PlanetRepository extends JpaRepository<Planet, Long> {
 
 	@Query("SELECT p FROM Planet p WHERE p.moonCount > :moonCount")
 	List<Planet> getPlanetsWithMoonCountGreaterThan(Integer moonCount);
+
+	@Query("SELECT p FROM Planet p JOIN p.galaxy g WHERE g.size > :size")
+	List<Planet> getPlanetsFromGalaxiesWithSizeGreaterThan(Long size);
 }
