@@ -73,3 +73,17 @@ INSERT INTO employees (id, first_name, last_name, job_title, login_id, birth_dat
 (285, 'Syed', 'Abbas', 'Pacific Sales Manager', 'adventure-works\syed0', '1975-01-11', 'M', 'M', '2013-03-14', 20, 30),
 (287, 'Amy', 'Alberts', 'European Sales Manager', 'adventure-works\amy0', '1957-09-20', 'M', 'F', '2012-04-16', 21, 30)
 ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO planets (id, name, size, moon_count) VALUES
+(1, 'Mercury', 4879, 0),
+(2, 'Venus', 12104, 0),
+(3, 'Earth', 12756, 1),
+(4, 'Mars', 6792, 2),
+(5, 'Jupiter', 142984, 115),
+(6, 'Saturn', 120536, 293),
+(7, 'Uranus', 51118, 29),
+(8, 'Neptune', 49528, 16),
+(9, 'Andromeda I', 17760, 0),
+(10, 'Andromeda II', 14000, 0),
+(11, 'Andromeda III', 11700, 0)
+ON CONFLICT (id) DO NOTHING;
