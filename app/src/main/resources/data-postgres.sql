@@ -74,16 +74,21 @@ INSERT INTO employees (id, first_name, last_name, job_title, login_id, birth_dat
 (287, 'Amy', 'Alberts', 'European Sales Manager', 'adventure-works\amy0', '1957-09-20', 'M', 'F', '2012-04-16', 21, 30)
 ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO planets (id, name, size, moon_count) VALUES
-(1, 'Mercury', 4879, 0),
-(2, 'Venus', 12104, 0),
-(3, 'Earth', 12756, 1),
-(4, 'Mars', 6792, 2),
-(5, 'Jupiter', 142984, 115),
-(6, 'Saturn', 120536, 293),
-(7, 'Uranus', 51118, 29),
-(8, 'Neptune', 49528, 16),
-(9, 'Andromeda I', 17760, 0),
-(10, 'Andromeda II', 14000, 0),
-(11, 'Andromeda III', 11700, 0)
+INSERT INTO galaxies (id, name, size) VALUES
+(1, 'Milky Way', 100000),
+(2, 'Andromeda', 220000)
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO planets (id, name, size, moon_count, galaxy_id) VALUES
+(1, 'Mercury', 4879, 0, 1),
+(2, 'Venus', 12104, 0, 1),
+(3, 'Earth', 12756, 1, 1),
+(4, 'Mars', 6792, 2, 1),
+(5, 'Jupiter', 142984, 115, 1),
+(6, 'Saturn', 120536, 293, 1),
+(7, 'Uranus', 51118, 29, 1),
+(8, 'Neptune', 49528, 16, 1),
+(9, 'Andromeda I', 17760, 0, 2),
+(10, 'Andromeda II', 14000, 0, 2),
+(11, 'Andromeda III', 11700, 0, 2)
 ON CONFLICT (id) DO NOTHING;
