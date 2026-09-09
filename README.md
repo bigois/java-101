@@ -7,11 +7,14 @@ It's not an application with a single purpose — it's a living repository, mean
 ## Stack
 
 - Java 21
-- Gradle
-- Spring Boot/Spring Data JPA
-- JUnit 5
-- Lombok
-- Topic-specific libraries: Apache POI, Gson/Jackson, JSON Schema Validator, Eclipse Collections, OpenAI Java SDK
+- Gradle 9.2, through the Gradle Wrapper
+- Spring Boot, Spring MVC and Spring Data JPA
+- PostgreSQL and SQL Server drivers for persistence examples
+- JUnit 5 and Lombok
+- Guava and Eclipse Collections
+- JSON tooling: Gson, Jackson, org.json and JSON Schema Validator
+- Apache POI for spreadsheet examples
+- OpenAI Java SDK
 
 ## Structure
 
@@ -39,10 +42,29 @@ Each package is self-contained and can be explored independently.
 
 ## Running it
 
-```bash
-./gradlew build
-./gradlew test
+### Prerequisites
+
+- JDK 21, with `JAVA_HOME` pointing to its installation directory
+- A supported database and the `DB_PASSWORD` environment variable for JPA and web examples
+- `OMDB_API_KEY` for the Spring Boot example that consumes the OMDb API
+
+### Build and test
+
+On Windows:
+
+```powershell
+.\gradlew.bat :app:build
+.\gradlew.bat :app:test
 ```
+
+On macOS or Linux:
+
+```bash
+./gradlew :app:build
+./gradlew :app:test
+```
+
+Individual examples can be run from their `main` methods in an IDE.
 
 ## Purpose
 
