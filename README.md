@@ -1,4 +1,4 @@
-# java101
+# java-101
 
 This is a study project where I collect practical examples of language features and ecosystem libraries, from basics to more advanced topics, as I learn (or review) each subject.
 
@@ -17,22 +17,23 @@ It's not an application with a single purpose — it's a living repository, mean
 
 Examples are organized by topic under `app/src/main/java/br/com/bigois`, each with its corresponding tests under `app/src/test`:
 
-- **interfaces** — classic interfaces, default methods, static methods and functional interfaces
-- **streams** — Stream API
-- **optional** — `Optional`
-- **comparable** — `Comparable`/sorting
-- **exception** — custom exception handling
-- **autocloseable** — `AutoCloseable`/try-with-resources
-- **methodReference** — method references
-- **polymorphism** — polymorphism
-- **mapper** — object-to-object mapping (simple, DTO, nested)
-- **io** — file reading and writing (`InputStream`, `FileWriter`)
-- **scanner** — input via `Scanner`
-- **httprequest** — HTTP calls
-- **jsonschema** — JSON validation against a schema
-- **openai** — integration with the OpenAI API
-- **springboot** — sample Spring Boot application
-- **jpa** — Spring Data JPA: simple insert, insert with relationship and views with relationship
+- **interfaces** — interfaces and functional programming
+- **streams** — data processing with the Stream API
+- **optional** — optional values with `Optional`
+- **comparable** — object comparison and sorting
+- **exception** — exception handling
+- **autocloseable** — resource management with `AutoCloseable`
+- **methodreference** — method references
+- **polymorphism** — object-oriented polymorphism
+- **mapper** — object mapping
+- **io** — input and output operations
+- **scanner** — console input
+- **httprequest** — HTTP communication
+- **jsonschema** — JSON validation
+- **openai** — OpenAI API integration
+- **springboot** — application development with Spring Boot
+- **jpa** — data persistence with Spring Data JPA
+- **web** — web development with Spring Boot
 
 Each package is self-contained and can be explored independently.
 
