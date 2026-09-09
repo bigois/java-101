@@ -1,6 +1,6 @@
 package br.com.bigois.web.crud.repository;
 
-import br.com.bigois.web.crud.entity.Dish;
+import br.com.bigois.web.crud.model.Dish;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
