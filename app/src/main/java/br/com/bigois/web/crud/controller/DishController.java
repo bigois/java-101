@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/v1/dishes", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/v1/dishes", produces = MediaType.APPLICATION_JSON_VALUE)
 public class DishController {
 	private final DishRepository dishRepository;
 
