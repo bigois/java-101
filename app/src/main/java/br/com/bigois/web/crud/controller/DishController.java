@@ -1,6 +1,6 @@
 package br.com.bigois.web.crud.controller;
 
-import br.com.bigois.web.crud.entity.Dish;
+import br.com.bigois.web.crud.dto.DishDTO;
 import br.com.bigois.web.crud.repository.DishRepository;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,9 @@ public class DishController {
 	}
 
 	@GetMapping
-	public List<Dish> getDishes() {
-		return dishRepository.findAll();
+	public List<DishDTO> getDishes() {
+		return dishRepository.findByAvailableTrue().stream()
+				.map(DishDTO::new)
+				.toList();
 	}
 }
