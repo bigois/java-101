@@ -93,13 +93,31 @@ VALUES (1, 'Mercury', 4879, 0, 1),
        (11, 'Andromeda III', 11700, 0, 2)
 ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO dishes (id, name, description, price, available, preparation_time)
-VALUES (1001, 'Edamame', 'Steamed soybeans seasoned with sea salt', 16.90, true, 10),
-       (1002, 'Gyoza', 'Pan-fried dumplings filled with pork and vegetables', 24.90, true, 15),
-       (1003, 'Shrimp Tempura', 'Crispy battered shrimp served with tempura sauce', 32.90, false, 20),
-       (2001, 'Gyudon', 'Japanese rice bowl with beef and onions', 39.90, true, 20),
-       (2002, 'Grilled Salmon', 'Grilled salmon served with vegetables', 54.90, false, 30),
-       (2003, 'Chicken Teriyaki', 'Grilled chicken glazed with homemade teriyaki sauce', 42.90, true, 25),
-       (2004, 'Tokyo Shoyu Ramen', 'Japanese noodle soup with soy-based broth, pork and egg', 47.90, true, 35),
-       (2005, 'Vegetable Yakisoba', 'Stir-fried noodles with fresh vegetables and yakisoba sauce', 34.90, false, 25)
+INSERT INTO menus (id, country, description)
+VALUES (1, 'England', 'British pub favourites, from fish and chips to hearty roasts'),
+       (2, 'United States', 'American comfort food, from burgers and ribs to classic desserts'),
+       (3, 'Japan', 'Japanese favourites, from savoury starters to ramen and yakisoba')
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO dishes (id, name, description, price, available, preparation_time, menu_id)
+VALUES (1, 'Fish and Chips', 'Battered fish served with chips and tartar sauce', 32.90, true, 20, 1),
+       (2, 'Shepherd''s Pie', 'Lamb and vegetables topped with mashed potatoes', 36.90, true, 30, 1),
+       (3, 'Bangers and Mash', 'Sausages served with mashed potatoes and onion gravy', 29.90, false, 25, 1),
+       (4, 'Beef Wellington', 'Beef fillet wrapped in mushroom duxelles and pastry', 64.90, true, 45, 1),
+       (5, 'Sunday Roast', 'Roast beef with vegetables, gravy and Yorkshire pudding', 52.90, false, 40, 1),
+       (6, 'Chicken Tikka Masala', 'Chicken in a creamy spiced tomato sauce with rice', 39.90, true, 30, 1),
+       (7, 'Yorkshire Pudding', 'Baked savoury pudding served with rich gravy', 18.90, true, 20, 1),
+       (8, 'Ploughman''s Lunch', 'Cheese, bread, pickles and fresh salad', 24.90, false, 15, 1),
+       (9, 'Classic Cheeseburger', 'Beef burger with cheese, lettuce, tomato and fries', 34.90, true, 20, 2),
+       (10, 'Barbecue Ribs', 'Slow-cooked pork ribs glazed with barbecue sauce', 48.90, true, 40, 2),
+       (11, 'Mac and Cheese', 'Pasta baked with a creamy cheddar cheese sauce', 27.90, true, 25, 2),
+       (12, 'Apple Pie', 'Warm apple pie served with vanilla ice cream', 18.90, true, 15, 2),
+       (13, 'Edamame', 'Steamed soybeans seasoned with sea salt', 16.90, true, 10, 3),
+       (14, 'Gyoza', 'Pan-fried dumplings filled with pork and vegetables', 24.90, true, 15, 3),
+       (15, 'Shrimp Tempura', 'Crispy battered shrimp served with tempura sauce', 32.90, false, 20, 3),
+       (16, 'Gyudon', 'Japanese rice bowl with beef and onions', 39.90, true, 20, 3),
+       (17, 'Grilled Salmon', 'Grilled salmon served with vegetables', 54.90, false, 30, 3),
+       (18, 'Chicken Teriyaki', 'Grilled chicken glazed with homemade teriyaki sauce', 42.90, true, 25, 3),
+       (19, 'Tokyo Shoyu Ramen', 'Japanese noodle soup with soy-based broth, pork and egg', 47.90, true, 35, 3),
+       (20, 'Vegetable Yakisoba', 'Stir-fried noodles with fresh vegetables and yakisoba sauce', 34.90, false, 25, 3)
 ON CONFLICT (id) DO NOTHING;

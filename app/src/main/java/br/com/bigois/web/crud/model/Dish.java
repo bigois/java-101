@@ -3,6 +3,8 @@ package br.com.bigois.web.crud.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,4 +35,8 @@ public class Dish {
 
 	@Column(name = "preparation_time", nullable = false)
 	private Integer preparationTime;
+
+	@ManyToOne
+	@JoinColumn(name = "menu_id", nullable = false)
+	private Menu menu;
 }
