@@ -1,6 +1,6 @@
 package br.com.bigois.web.crud.dto;
 
-import br.com.bigois.web.crud.entity.Dish;
+import br.com.bigois.web.crud.model.Dish;
 
 import java.math.BigDecimal;
 

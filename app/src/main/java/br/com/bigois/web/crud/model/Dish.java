@@ -1,4 +1,4 @@
-package br.com.bigois.web.crud.entity;
+package br.com.bigois.web.crud.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
