@@ -96,9 +96,9 @@ ON CONFLICT (id) DO NOTHING;
 INSERT INTO dishes (id, name, description, price, available, preparation_time)
 VALUES (1001, 'Edamame', 'Steamed soybeans seasoned with sea salt', 16.90, true, 10),
        (1002, 'Gyoza', 'Pan-fried dumplings filled with pork and vegetables', 24.90, true, 15),
-       (1003, 'Shrimp Tempura', 'Crispy battered shrimp served with tempura sauce', 32.90, true, 20),
+       (1003, 'Shrimp Tempura', 'Crispy battered shrimp served with tempura sauce', 32.90, false, 20),
        (2001, 'Gyudon', 'Japanese rice bowl with beef and onions', 39.90, true, 20),
-       (2002, 'Grilled Salmon', 'Grilled salmon served with vegetables', 54.90, true, 30),
+       (2002, 'Grilled Salmon', 'Grilled salmon served with vegetables', 54.90, false, 30),
        (2003, 'Chicken Teriyaki', 'Grilled chicken glazed with homemade teriyaki sauce', 42.90, true, 25),
        (2004, 'Tokyo Shoyu Ramen', 'Japanese noodle soup with soy-based broth, pork and egg', 47.90, true, 35),
        (2005, 'Vegetable Yakisoba', 'Stir-fried noodles with fresh vegetables and yakisoba sauce', 34.90, false, 25)
