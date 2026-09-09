@@ -75,6 +75,12 @@ dependencies {
     // Spring Boot Web MVC for building web applications
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+
+    // Spring Boot DevTools for hot reloading during development
+    // In IntelliJ IDEA enable:
+    // 1. Settings > Build, Execution, Deployment > Compiler > Build project automatically
+    // 2. Settings > Advanced Settings > Compiler > Allow auto-make to start even if developed application is currently running
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.withType(JavaCompile).configureEach {
