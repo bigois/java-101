@@ -3,19 +3,22 @@ package br.com.bigois.web.crud.dto;
 import br.com.bigois.web.crud.model.Dish;
 
 import java.math.BigDecimal;
+import java.util.List;
 
-public record DishDTO(
+public record DishIngredientsDTO(
 		Long id,
 		String name,
 		String description,
-		BigDecimal price
+		BigDecimal price,
+		List<IngredientDTO> ingredients
 ) {
-	public DishDTO(Dish dish) {
+	public DishIngredientsDTO(Dish dish) {
 		this(
 				dish.getId(),
 				dish.getName(),
 				dish.getDescription(),
-				dish.getPrice()
+				dish.getPrice(),
+				dish.getIngredients().stream().map(IngredientDTO::new).toList()
 		);
 	}
 }

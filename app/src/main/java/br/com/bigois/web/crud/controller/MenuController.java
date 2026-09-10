@@ -1,5 +1,6 @@
 package br.com.bigois.web.crud.controller;
 
+import br.com.bigois.web.crud.dto.DishIngredientsDTO;
 import br.com.bigois.web.crud.dto.MenuDTO;
 import br.com.bigois.web.crud.dto.MenuDishesDTO;
 import br.com.bigois.web.crud.service.MenuService;
@@ -25,8 +26,13 @@ public class MenuController {
 		return menuService.getMenus();
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/{id}/dishes")
 	public MenuDishesDTO getMenuById(@PathVariable Long id) {
 		return menuService.getMenuById(id);
+	}
+
+	@GetMapping("/{menuId}/dishes/{dishId}")
+	public DishIngredientsDTO getDishIngredientsByMenuIdAndDishId(@PathVariable Long menuId, @PathVariable Long dishId) {
+		return menuService.getDishIngredientsByMenuIdAndDishId(menuId, dishId);
 	}
 }
