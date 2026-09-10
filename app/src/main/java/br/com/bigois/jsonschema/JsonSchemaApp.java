@@ -5,7 +5,7 @@ import com.networknt.schema.Error;
 import java.util.List;
 import java.util.Locale;
 
-public class JSONSchemaApp {
+public class JsonSchemaApp {
 	public static void main(String[] args) {
 		// Set the default locale to English to ensure consistent error messages
 		Locale.setDefault(Locale.ENGLISH);
@@ -15,7 +15,7 @@ public class JSONSchemaApp {
 		String jsonFileName = "user.json";
 
 		// Create an instance of JSONValidationService and validate the JSON file against the schema
-		JSONValidationService validationService = new JSONValidationService(schemaFileName);
+		JsonValidationService validationService = new JsonValidationService(schemaFileName);
 		List<Error> validationMessages = validationService.validate(jsonFileName);
 
 		// Check if there are any validation errors

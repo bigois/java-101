@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class JSONSchemaAppTest {
+class JsonSchemaAppTest {
 	@Test
 	void shouldRunMain() {
-		assertDoesNotThrow(() -> JSONSchemaApp.main(new String[0]));
+		assertDoesNotThrow(() -> JsonSchemaApp.main(new String[0]));
 	}
 }

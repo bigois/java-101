@@ -8,10 +8,10 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-public class JSONValidationService {
+public class JsonValidationService {
 	private final Schema schema;
 
-	public JSONValidationService(String schemaFileName) {
+	public JsonValidationService(String schemaFileName) {
 		try (InputStream schemaInputStream = openResource(schemaFileName)) {
 			SchemaRegistry registry = SchemaRegistry.withDefaultDialect(SpecificationVersion.DRAFT_2020_12);
 			this.schema = registry.getSchema(schemaInputStream, InputFormat.JSON);
