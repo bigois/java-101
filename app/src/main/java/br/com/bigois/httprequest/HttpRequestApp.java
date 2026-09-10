@@ -18,7 +18,7 @@ public class HttpRequestApp {
 		String title = getMovieTitle();
 		URI uri = buildUri(title);
 		String response = sendRequest(uri);
-		IMDbMovie movie = parseResponse(response);
+		ImdbMovie movie = parseResponse(response);
 
 		System.out.println(movie);
 	}
@@ -74,8 +74,8 @@ public class HttpRequestApp {
 	}
 
 	// Finally, we need to parse the response and display the movie information
-	public static IMDbMovie parseResponse(String response) {
+	public static ImdbMovie parseResponse(String response) {
 		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
-		return gson.fromJson(response, IMDbMovie.class);
+		return gson.fromJson(response, ImdbMovie.class);
 	}
 }

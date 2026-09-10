@@ -5,18 +5,18 @@ import br.com.bigois.web.crud.model.Menu;
 
 import java.util.List;
 
-public record MenuDishesDTO(
+public record MenuDishesDto(
 		Long id,
 		String country,
 		String description,
-		List<DishDTO> dishes
+		List<DishDto> dishes
 ) {
-	public MenuDishesDTO(Menu menu, List<Dish> dishes) {
+	public MenuDishesDto(Menu menu, List<Dish> dishes) {
 		this(
 				menu.getId(),
 				menu.getCountry(),
 				menu.getDescription(),
-				dishes.stream().map(DishDTO::new).toList()
+				dishes.stream().map(DishDto::new).toList()
 		);
 	}
 }

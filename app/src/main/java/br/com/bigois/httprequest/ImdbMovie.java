@@ -2,7 +2,7 @@ package br.com.bigois.httprequest;
 
 import com.google.gson.annotations.SerializedName;
 
-public record IMDbMovie(
+public record ImdbMovie(
 		String title,
 		String year,
 		String rated,

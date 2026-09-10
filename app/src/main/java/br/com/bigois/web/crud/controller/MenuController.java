@@ -1,8 +1,8 @@
 package br.com.bigois.web.crud.controller;
 
-import br.com.bigois.web.crud.dto.DishIngredientsDTO;
-import br.com.bigois.web.crud.dto.MenuDTO;
-import br.com.bigois.web.crud.dto.MenuDishesDTO;
+import br.com.bigois.web.crud.dto.DishIngredientsDto;
+import br.com.bigois.web.crud.dto.MenuDto;
+import br.com.bigois.web.crud.dto.MenuDishesDto;
 import br.com.bigois.web.crud.service.MenuService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,17 +22,17 @@ public class MenuController {
 	}
 
 	@GetMapping
-	public List<MenuDTO> getMenus() {
+	public List<MenuDto> getMenus() {
 		return menuService.getMenus();
 	}
 
 	@GetMapping("/{id}/dishes")
-	public MenuDishesDTO getMenuById(@PathVariable Long id) {
+	public MenuDishesDto getMenuById(@PathVariable Long id) {
 		return menuService.getMenuById(id);
 	}
 
 	@GetMapping("/{menuId}/dishes/{dishId}")
-	public DishIngredientsDTO getDishIngredientsByMenuIdAndDishId(@PathVariable Long menuId, @PathVariable Long dishId) {
+	public DishIngredientsDto getDishIngredientsByMenuIdAndDishId(@PathVariable Long menuId, @PathVariable Long dishId) {
 		return menuService.getDishIngredientsByMenuIdAndDishId(menuId, dishId);
 	}
 }
