@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface DishRepository extends JpaRepository<Dish, Long> {
 	List<Dish> findByAvailableTrue();
+	List<Dish> findByMenuIdAndAvailableTrue(Long menuId);
 }
