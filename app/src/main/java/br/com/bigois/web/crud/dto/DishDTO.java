@@ -11,6 +11,11 @@ public record DishDTO(
 		BigDecimal price
 ) {
 	public DishDTO(Dish dish) {
-		this(dish.getId(), dish.getName(), dish.getDescription(), dish.getPrice());
+		this(
+				dish.getId(),
+				dish.getName(),
+				dish.getDescription(),
+				dish.getPrice()
+		);
 	}
 }
