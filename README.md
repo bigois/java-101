@@ -69,3 +69,7 @@ On macOS or Linux:
 ```
 
 Individual examples can be run from their `main` methods in an IDE.
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/bigois/java-101/blob/main/LICENSE).
