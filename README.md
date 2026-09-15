@@ -4,6 +4,10 @@ This is a study project where I collect practical examples of language features 
 
 It's not an application with a single purpose — it's a living repository, meant to keep growing with new packages and examples over time.
 
+## Purpose
+
+Serves as a personal study reference, with no fixed roadmap — new topics and refactors get added as learning progresses.
+
 ## Stack
 
 - Java 21
@@ -65,7 +69,3 @@ On macOS or Linux:
 ```
 
 Individual examples can be run from their `main` methods in an IDE.
-
-## Purpose
-
-Serves as a personal study reference, with no fixed roadmap — new topics and refactors get added as learning progresses.
