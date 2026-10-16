@@ -45,7 +45,7 @@ dependencies {
 
     // JSON Schema Validator for validating JSON against a schema
     implementation 'com.networknt:json-schema-validator:3.0.6'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.3'
 
     // Libraries for JSON serialization and deserialization
     implementation 'com.google.code.gson:gson:2.10.1'
