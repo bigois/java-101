@@ -11,9 +11,11 @@ import java.util.Optional;
 @ToString
 public class Person {
 	@Getter
+	@NonNull
 	private String firstName;
 	private String middleName;
 	@Getter
+	@NonNull
 	private String lastName;
 
 	/* Constructor overloading */
