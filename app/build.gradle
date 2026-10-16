@@ -11,6 +11,11 @@ plugins {
 group = 'br.com.bigois'
 version = '0.0.1-SNAPSHOT'
 
+// Align direct and transitive dependencies with patched releases
+ext['log4j2.version'] = '2.26.1'
+ext['jackson-2-bom.version'] = '2.22.3'
+ext['jackson-bom.version'] = '3.1.7'
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
