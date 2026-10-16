@@ -60,6 +60,9 @@ dependencies {
     // Mockito for mocking in tests
     testImplementation("org.mockito:mockito-core:5.24.0")
 
+    // H2 in-memory database for testing with @DataJpaTest
+    testRuntimeOnly 'com.h2database:h2'
+
     // Eclipse Collections helpers for BigDecimal stream statistics
     implementation("org.eclipse.collections:eclipse-collections:13.0.0")
 
