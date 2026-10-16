@@ -1,7 +1,9 @@
 package br.com.bigois.jpa.linkedinsert.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
 @Table(name = "candidates")
 public class Candidate {
