@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    modularity.inferModulePath = true
+}
+
+dependencies {
+    implementation project(':organacode')
+}
+
+// Run JPMSApp as the entry point of the named JPMS module.
+application {
+    mainModule = 'br.com.bigois.jpms'
+    mainClass = 'br.com.bigois.jpms.JPMSApp'
+}

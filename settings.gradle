@@ -12,3 +12,6 @@ plugins {
 
 rootProject.name = 'java-101'
 include('app')
+
+// Include the provider and consumer subprojects for the JPMS example
+include('organacode', 'jpms-example')
