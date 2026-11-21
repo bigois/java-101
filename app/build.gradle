@@ -18,6 +18,8 @@ ext['jackson-bom.version'] = libs.versions.jackson.bom.get()
 
 ext['spring-framework.version'] = libs.versions.spring.framework.get()
 
+ext['tomcat.version'] = libs.versions.tomcat.get()
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
