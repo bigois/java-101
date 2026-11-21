@@ -2,8 +2,7 @@ package br.com.bigois.optional;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class OptionalAppTest {
 	@Test
@@ -14,27 +13,26 @@ class OptionalAppTest {
 	@Test
 	void shouldReturnEmptyOptionalForNullMiddleName() {
 		Person person = new Person("John", null, "Doe");
-		assert(person.getMiddleName().isEmpty());
+		assertTrue(person.getMiddleName().isEmpty());
 	}
 
 	@Test
 	void shouldReturnNonEmptyOptionalForNonNullMiddleName() {
 		Person person = new Person("John", "Michael", "Doe");
-		assert(person.getMiddleName().isPresent());
+		assertTrue(person.getMiddleName().isPresent());
 	}
 
 	@Test
 	void shouldReturnFirstName() {
 		Person person = new Person("John", "Michael", "Doe");
-		assert(person.getFirstName().equals("John"));
+		assertEquals("John", person.getFirstName());
 	}
 
 	@Test
 	void shouldReturnLastName() {
 		Person person = new Person("John", "Michael", "Doe");
-		assert(person.getLastName().equals("Doe"));
+		assertEquals("Doe", person.getLastName());
 	}
-
 
 	@Test
 	@SuppressWarnings("DataFlowIssue")
