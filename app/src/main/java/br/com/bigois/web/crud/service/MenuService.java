@@ -1,8 +1,8 @@
 package br.com.bigois.web.crud.service;
 
 import br.com.bigois.web.crud.dto.DishIngredientsDto;
-import br.com.bigois.web.crud.dto.MenuDto;
 import br.com.bigois.web.crud.dto.MenuDishesDto;
+import br.com.bigois.web.crud.dto.MenuDto;
 import br.com.bigois.web.crud.repository.DishRepository;
 import br.com.bigois.web.crud.repository.MenuRepository;
 import org.springframework.stereotype.Service;

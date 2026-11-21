@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum CustomerType {
-	F ("F = Pessoa Física"),
-	J ("J = Pessoa Jurídica");
+	F("F = Pessoa Física"),
+	J("J = Pessoa Jurídica");
 
 	private final String description;
 

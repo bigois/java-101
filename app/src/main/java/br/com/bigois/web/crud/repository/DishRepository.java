@@ -10,5 +10,6 @@ import java.util.Optional;
 @Repository
 public interface DishRepository extends JpaRepository<Dish, Long> {
 	List<Dish> findByMenuIdAndAvailableTrue(Long menuId);
+
 	Optional<Dish> findByMenuIdAndIdAndAvailableTrue(Long menuId, Long id);
 }

@@ -1,8 +1,6 @@
 package br.com.bigois.designpatterns.strategy.domain;
 
 import br.com.bigois.designpatterns.strategy.dto.CustomerRegistrationRequest;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;

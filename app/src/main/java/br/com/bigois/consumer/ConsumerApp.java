@@ -10,10 +10,10 @@ public class ConsumerApp {
 		List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
 
 		// Lambda expression with explicit parameter type
-		names.forEach((String s) ->  System.out.println(s.charAt(0)));
+		names.forEach((String s) -> System.out.println(s.charAt(0)));
 
 		// Lambda expression with implicit parameter type
-		names.forEach(s ->  System.out.println(s.charAt(s.length() - 1)));
+		names.forEach(s -> System.out.println(s.charAt(s.length() - 1)));
 
 		// Method reference to shorter syntax
 		names.forEach(System.out::println);

@@ -1,10 +1,9 @@
 package br.com.bigois.designpatterns.command.client;
 
-import br.com.bigois.designpatterns.command.invoker.CommandInvoker;
 import br.com.bigois.designpatterns.command.commands.DateCommand;
 import br.com.bigois.designpatterns.command.commands.DayOfWeekCommand;
 import br.com.bigois.designpatterns.command.commands.TimeCommand;
-
+import br.com.bigois.designpatterns.command.invoker.CommandInvoker;
 import br.com.bigois.designpatterns.command.receiver.DateTimeReceiver;
 
 import java.util.Scanner;

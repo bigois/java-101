@@ -1,8 +1,8 @@
 package br.com.bigois.web.crud.controller;
 
 import br.com.bigois.web.crud.dto.DishIngredientsDto;
-import br.com.bigois.web.crud.dto.MenuDto;
 import br.com.bigois.web.crud.dto.MenuDishesDto;
+import br.com.bigois.web.crud.dto.MenuDto;
 import br.com.bigois.web.crud.service.MenuService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

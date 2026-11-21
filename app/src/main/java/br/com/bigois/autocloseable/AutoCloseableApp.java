@@ -19,7 +19,7 @@ public class AutoCloseableApp {
 
 		// Generate report using try-with-resources to ensure proper resource management
 		try (XSSFWorkbook workbook = new XSSFWorkbook();
-		     FileOutputStream out = new FileOutputStream(reportPath.toFile())) {
+			 FileOutputStream out = new FileOutputStream(reportPath.toFile())) {
 			// Create sheet
 			Sheet sheet = workbook.createSheet("People");
 
