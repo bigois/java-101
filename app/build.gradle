@@ -3,8 +3,8 @@ plugins {
     id 'java'
 
     // Apply the Spring Boot plugin to add support for building Spring applications
-    id 'org.springframework.boot' version '4.1.0'
-    id 'io.spring.dependency-management' version '1.1.7'
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
 }
 
 // Define the group and version of the project
@@ -12,9 +12,9 @@ group = 'br.com.bigois'
 version = '0.0.1-SNAPSHOT'
 
 // Align direct and transitive dependencies with patched releases
-ext['log4j2.version'] = '2.26.1'
-ext['jackson-2-bom.version'] = '2.22.3'
-ext['jackson-bom.version'] = '3.1.7'
+ext['log4j2.version'] = libs.versions.log4j2.get()
+ext['jackson-2-bom.version'] = libs.versions.jackson2.bom.get()
+ext['jackson-bom.version'] = libs.versions.jackson.bom.get()
 
 // Apply a specific Java toolchain to ease working on different environments
 java {
@@ -31,67 +31,67 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing
     testImplementation libs.junit.jupiter
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly libs.junit.platform.launcher
 
     // This dependency is used by the application
     implementation libs.guava
 
     // Apache POI for XSSFWorkbook (xlsx generation)
-    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.26.1'
-    implementation 'org.apache.poi:poi-ooxml:5.5.1'
+    runtimeOnly libs.log4j.core
+    implementation libs.poi.ooxml
 
     // JSON library for parsing JSON files
-    implementation 'org.json:json:20260522'
+    implementation libs.json
 
     // JSON Schema Validator for validating JSON against a schema
-    implementation 'com.networknt:json-schema-validator:3.0.6'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.3'
+    implementation libs.json.schema.validator
+    implementation libs.jackson.databind
 
     // Libraries for JSON serialization and deserialization
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation libs.gson
 
     // Spring Boot dependencies for building a Spring application
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation libs.spring.boot.starter
+    testImplementation libs.spring.boot.starter.test
 
     // JUnit Platform Launcher for running tests
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly libs.junit.platform.launcher
 
     // Mockito for mocking in tests
-    testImplementation("org.mockito:mockito-core:5.24.0")
+    testImplementation libs.mockito.core
 
     // H2 in-memory database for testing with @DataJpaTest
-    testRuntimeOnly 'com.h2database:h2'
+    testRuntimeOnly libs.h2
 
     // Eclipse Collections helpers for BigDecimal stream statistics
-    implementation("org.eclipse.collections:eclipse-collections:13.0.0")
+    implementation libs.eclipse.collections
 
     // OpenAI Java SDK for interacting with OpenAI APIs
-    implementation("com.openai:openai-java:4.50.0")
+    implementation libs.openai.java
 
     // Spring Boot Data JPA for database access
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+    implementation libs.spring.boot.starter.data.jpa
+    testImplementation libs.spring.boot.starter.data.jpa.test
 
     // Database drivers
-    runtimeOnly 'org.postgresql:postgresql'
-    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+    runtimeOnly libs.postgresql
+    runtimeOnly libs.sqlserver.jdbc
 
     // Lombok for reducing boilerplate code
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+    testCompileOnly libs.lombok
+    testAnnotationProcessor libs.lombok
 
     // Spring Boot Web MVC for building web applications
-    implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    implementation libs.spring.boot.starter.webmvc
+    testImplementation libs.spring.boot.starter.webmvc.test
 
     // Spring Boot DevTools for hot reloading during development
     // In IntelliJ IDEA enable:
     // 1. Settings > Build, Execution, Deployment > Compiler > Build project automatically
     // 2. Settings > Advanced Settings > Compiler > Allow auto-make to start even if developed application is currently running
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    developmentOnly libs.spring.boot.devtools
 }
 
 tasks.withType(JavaCompile).configureEach {
