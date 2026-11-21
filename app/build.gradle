@@ -26,6 +26,8 @@ ext['commons-codec.version'] = libs.versions.commons.codec.get()
 
 ext['spring-data-bom.version'] = libs.versions.spring.data.bom.get()
 
+ext['json-smart.version'] = libs.versions.json.smart.get()
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
