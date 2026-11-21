@@ -15,18 +15,21 @@ version = '0.0.1-SNAPSHOT'
 ext['log4j2.version'] = libs.versions.log4j2.get()
 ext['jackson-2-bom.version'] = libs.versions.jackson2.bom.get()
 ext['jackson-bom.version'] = libs.versions.jackson.bom.get()
-
 ext['spring-framework.version'] = libs.versions.spring.framework.get()
-
 ext['tomcat.version'] = libs.versions.tomcat.get()
-
 ext['logback.version'] = libs.versions.logback.get()
-
 ext['commons-codec.version'] = libs.versions.commons.codec.get()
-
 ext['spring-data-bom.version'] = libs.versions.spring.data.bom.get()
-
 ext['json-smart.version'] = libs.versions.json.smart.get()
+
+configurations {
+    testCompileClasspath {
+        exclude group: 'com.vaadin.external.google', module: 'android-json'
+    }
+    testRuntimeClasspath {
+        exclude group: 'com.vaadin.external.google', module: 'android-json'
+    }
+}
 
 // Apply a specific Java toolchain to ease working on different environments
 java {
