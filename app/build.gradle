@@ -24,6 +24,8 @@ ext['logback.version'] = libs.versions.logback.get()
 
 ext['commons-codec.version'] = libs.versions.commons.codec.get()
 
+ext['spring-data-bom.version'] = libs.versions.spring.data.bom.get()
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
