@@ -22,6 +22,8 @@ ext['tomcat.version'] = libs.versions.tomcat.get()
 
 ext['logback.version'] = libs.versions.logback.get()
 
+ext['commons-codec.version'] = libs.versions.commons.codec.get()
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
