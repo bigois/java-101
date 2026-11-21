@@ -15,6 +15,8 @@ import org.springframework.test.context.ContextConfiguration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DataJpaTest
+// Activate the test profile to avoid loading the dev-postgres configuration
+// No application-test.properties file is needed for this test
 @ActiveProfiles("test")
 // Use the test configuration instead of starting JpaInsertWithRelationApp and its CommandLineRunner.
 @ContextConfiguration(classes = PoliticalPartyRepositoryTest.Config.class)
