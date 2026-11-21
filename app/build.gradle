@@ -20,6 +20,8 @@ ext['spring-framework.version'] = libs.versions.spring.framework.get()
 
 ext['tomcat.version'] = libs.versions.tomcat.get()
 
+ext['logback.version'] = libs.versions.logback.get()
+
 // Apply a specific Java toolchain to ease working on different environments
 java {
     toolchain {
