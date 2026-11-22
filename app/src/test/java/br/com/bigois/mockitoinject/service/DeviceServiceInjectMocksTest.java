@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 // Use the MockitoExtension to enable Mockito annotations to work with JUnit 5
 @ExtendWith(MockitoExtension.class)
-class DeviceServiceTest {
+class DeviceServiceInjectMocksTest {
 	// Mock the DeviceRepository to avoid errors when testing the DeviceService
 	@Mock
 	private DeviceRepository repository;
