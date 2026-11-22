@@ -3,6 +3,7 @@ package br.com.bigois.mockitoinject.controller;
 import br.com.bigois.mockitoinject.dto.DeviceRequest;
 import br.com.bigois.mockitoinject.dto.DeviceResponse;
 import br.com.bigois.mockitoinject.service.DeviceService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ public class DeviceController {
 	}
 
 	@PostMapping
-	public ResponseEntity<DeviceResponse> createDevice(@RequestBody DeviceRequest request) {
+	public ResponseEntity<DeviceResponse> createDevice(@RequestBody @Valid DeviceRequest request) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(deviceService.createDevice(request));
 	}
 }

@@ -67,6 +67,7 @@ dependencies {
 
     // Spring Boot dependencies for building a Spring application
     implementation libs.spring.boot.starter
+    implementation libs.spring.boot.starter.validation
     testImplementation libs.spring.boot.starter.test
 
     // JUnit Platform Launcher for running tests

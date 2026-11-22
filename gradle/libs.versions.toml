@@ -23,6 +23,7 @@ jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", ver
 gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
 spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring-boot" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "spring-boot" }
 mockito-core = { module = "org.mockito:mockito-core", version = "5.24.0" }
 h2 = { module = "com.h2database:h2", version = "2.5.252" }
 eclipse-collections = { module = "org.eclipse.collections:eclipse-collections", version = "13.0.0" }
