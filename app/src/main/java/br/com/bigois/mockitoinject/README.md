@@ -1,42 +1,39 @@
 # Mockito Dependency Injection
 
-Tests device lookup in a service using a mocked repository injected by Mockito.
+Examples of testing the device service and controller with Mockito and Spring MVC.
 
 ## Responsibilities
 
 1. **Entity (`Device`):** maps device data to the `devices` table.
-2. **Repository (`DeviceRepository`):** inherits persistence operations from `JpaRepository<Device, Long>`.
-3. **Service (`DeviceService`):** delegates device lookups to the repository.
-4. **Test (`DeviceServiceTest`):** checks the service with a mocked repository and mocked devices.
-5. **Application (`MockitoInjectApp`):** starts Spring Boot and prints a device and the list of devices using the
-   service.
+2. **Repository (`DeviceRepository`):** provides persistence operations through `JpaRepository`.
+3. **Service (`DeviceService`):** looks up and creates devices using the repository.
+4. **Controller (`DeviceController`):** exposes device endpoints and validates creation requests.
+5. **Application (`MockitoInjectApp`):** starts the Spring Boot application.
 
 ## Learning Notes
 
-- `@ExtendWith(MockitoExtension.class)` enables Mockito annotations for the JUnit tests.
-- `@Mock` creates substitutes for the repository and a device. `@InjectMocks` creates the service and injects the mocked
-  repository.
-- The service is real in the test, but the repository is a mock, so the test does not connect to a database or start
-  Spring.
-- `shouldFindDeviceById` checks that the result for ID `1` is present; it does not check the device fields.
-- `shouldFindThreeDevices` uses a real list containing three mocked devices and checks its size.
-- The current `given(...)` calls execute service methods during setup, which delegate to the mocked repository.
-  Configuring `repository.findById(...)` and `repository.findAll()` directly makes the mocked behavior explicit.
-- `MockitoInjectApp` is separate from the unit tests and uses the configured datasource when run.
+- `DeviceServiceInjectMocksTest` uses `@InjectMocks` to create a real service with a mocked repository. Its current stubbing calls the real service methods during setup; the exception test also configures an exception but expects an empty result.
+- `DeviceControllerTest` creates a real controller and service manually, with a mocked repository. It captures the device passed to `save`.
+- `DeviceControllerInjectMocksTest` uses `@InjectMocks` to create a real controller and inject a mocked service. It checks the returned status and body and verifies the service call, without starting Spring or a database.
+- `DeviceControllerWebTest` uses `@WebMvcTest`, `MockMvc` and `@MockitoBean` to test the HTTP layer. It checks that a negative price produces HTTP 400 and does not call the service.
+- `@InjectMocks` is a Mockito feature for constructing an object in a unit test. `@MockitoBean` replaces a bean in the Spring test context.
+- Calling a controller directly does not run Spring MVC request validation; use `MockMvc` to exercise `@Valid` on an HTTP request.
+- The configured PostgreSQL profile uses `spring.jpa.hibernate.ddl-auto=create`; starting the full application context with that profile can recreate tables.
 
 ## Concept Flow
 
 ```mermaid
 flowchart LR
-    Test --> Service --> MockRepository["Mocked Repository"]
-    MockRepository --> Result["Configured Result"]
+    UnitTest["Unit test"] --> Service["Real service"] --> MockRepository["Mocked repository"]
+    WebTest["Web test"] --> MockMvc --> WebController["Real controller"] --> WebMock["Mocked service bean"]
 ```
 
 ## Implementation Flow
 
 ```mermaid
 flowchart LR
-    DeviceRepositoryTest --> DeviceService
-    DeviceService --> DeviceRepository["DeviceRepository Mock"]
-    DeviceRepository --> Devices["Mocked Device or Device List"]
+    Request["POST /devices"] --> Validation["Request validation"]
+    Validation -->|Valid| Service["DeviceService"] --> Repository["DeviceRepository"]
+    Validation -->|Invalid| BadRequest["HTTP 400"]
 ```
+
