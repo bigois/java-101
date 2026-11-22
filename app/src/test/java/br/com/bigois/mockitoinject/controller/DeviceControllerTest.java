@@ -13,9 +13,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 
+// Enable Mockito annotations without loading the Spring application context
 @ExtendWith(MockitoExtension.class)
 public class DeviceControllerTest {
-	// Inject the DeviceController with the mocked DeviceService
+	// Test the controller together with a real service and a mocked repository
 	private DeviceController controller;
 
 	// Mock the DeviceRepository to avoid errors when testing the DeviceController
@@ -26,7 +27,7 @@ public class DeviceControllerTest {
 	@Captor
 	private ArgumentCaptor<Device> requestCaptor;
 
-	// Set up the DeviceController with the mocked DeviceService before each test
+	// Set up the DeviceController with a real DeviceService before each test
 	@BeforeEach
 	void setUp() {
 		DeviceService service = new DeviceService(repository);
