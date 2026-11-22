@@ -4,6 +4,12 @@ VALUES (1, 'PT'),
        (3, 'MDB')
 ON CONFLICT (id) DO NOTHING;
 
+INSERT INTO devices (id, name, price)
+VALUES (1, 'Laptop', 4999.90),
+       (2, 'Smartphone', 2499.90),
+       (3, 'Tablet', 1799.90)
+ON CONFLICT (id) DO NOTHING;
+
 INSERT INTO employees (id, first_name, last_name, job_title, login_id, birth_date, marital_status, gender, hire_date, vacation_hours, sick_leave_hours)
 VALUES (1, 'Ken', 'Sánchez', 'Chief Executive Officer', 'adventure-works\ken0', '1969-01-29', 'S', 'M', '2009-01-14', 99, 69),
        (2, 'Terri', 'Duffy', 'Vice President of Engineering', 'adventure-works\terri0', '1971-08-01', 'S', 'F', '2008-01-31', 1, 20),
